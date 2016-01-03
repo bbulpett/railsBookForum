@@ -19,7 +19,23 @@
 @import "font-awesome";
 @font-face {
 	font-family: TypewriterURW-Lig;
-	src: url('/assets/fonts/TypewriterURW-Lig.ttf');
+	src: asset-url('TypewriterURW-Lig.ttf');
+}
+
+* {
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.002);
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 
 body {
@@ -31,8 +47,14 @@ body {
 }
 
 .heading {
-	width: 75%;
-	margin: 20px auto 10px auto;
+	width: 90%;
+	margin: 20px auto 10px;
+}
+
+.heading p{
+	float: right !important;
+	text-align: center;
+	margin-right: 30%;
 }
 
 .heading h1 {
@@ -41,6 +63,130 @@ body {
 	text-align: center;
 }
 
-.heading p{
-	text-align: right;
+.share-button a>i {
+	margin-right: 5px;
 }
+
+footer {
+	background-color: #B63E97;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	color: #fff;
+}
+
+.navbar {
+	background-color: transparent;
+	margin-top: 8px;
+	border: none;
+}
+
+ul.nav.navbar-nav>li>a {
+	color: #B63E97;
+	font-size: 16px;
+}
+
+.container {
+	padding: 15px;
+	margin: 0 5%;
+	width: 90%;
+}
+
+#about-author {
+	float: left;
+	width: 50%;
+}
+
+#about-author a {
+	color: #FFf;
+	text-decoration: underline;
+	font-weight: 600;
+}
+
+#about-author p {
+	font-size: 16px;
+}
+
+#book-info {
+	float: right;
+	border-left: 1px solid #FFF;
+	padding: 10px 15px 45px;
+	width: 30%;
+}
+
+@media (min-width: 480px) {
+	.heading h1 {
+		font-size: 32px;
+	}
+	.share-button {
+		text-align: center;
+	}
+	ul.nav.navbar-nav>li.active a {
+		border: none;
+		text-decoration: underline;
+		background-color: transparent;
+	}
+	.navbar-collapse {
+		border-bottom: 1px solid #DDD;
+	}
+
+	#book-info {
+		clear: left;
+		float: none;
+	}
+	footer {
+		margin-top: 700px;
+	}
+}
+
+@media (min-width: 768px) {
+	.heading h1 {
+		font-size: 40px;
+	}
+	.navbar-brand {
+		display: none;
+	}
+	ul.nav.navbar-nav>li.active a {
+		background-color: transparent;
+		border-top: 8px solid #E7E7E7;
+		margin-top: -8px;
+		text-decoration: none;
+	}
+	/* centered navigation */
+	 .nav.navbar-nav {
+	     float: left;
+	 }
+	 .nav.navbar-nav {
+	     clear: left;
+	     float: left;
+	     margin: 0;
+	     padding: 0;
+	     position: relative;
+	     left: 50%;
+	     text-align: center;
+	 }
+	 .nav.navbar-nav > li {
+	     position: relative;
+	     right: 50%;
+	 }
+	 .nav.navbar-nav li {
+	    text-align: left
+	 }
+	 	#book-info {
+	 	clear: none;
+		float: right;
+	}
+}
+
+@media (min-width: 992px) {
+	.heading h1 {
+		font-size: 56px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.heading h1 {
+		font-size: 68px;
+	}
+}
+
