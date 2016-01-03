@@ -17,3 +17,30 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@font-face {
+	font-family: TypewriterURW-Lig;
+	src: url('/assets/fonts/TypewriterURW-Lig.ttf');
+}
+
+body {
+	font-family: 'Droid Sans', Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	/*line-height: 1.42857143;*/
+	color: #555;
+	background-color: #FFF;
+}
+
+.heading {
+	width: 75%;
+	margin: 20px auto 10px auto;
+}
+
+.heading h1 {
+	font-family: TypewriterURW-Lig, 'Droid Serif', serif;
+	color: #777;
+	text-align: center;
+}
+
+.heading p{
+	text-align: right;
+}
