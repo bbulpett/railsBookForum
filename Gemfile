@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'rack', '>= 2.0.0.alpha'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Uglifier as compressor for JavaScript assets
