@@ -25,6 +25,11 @@ gem 'puma'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Kaminari gem does pagination and stuff
+gem 'kaminari', '0.16.3'
+# Thredded is a Rails messageboard (forum) engine
+gem 'thredded', github: 'jayroh/thredded'
+
 # Make it pretty
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
