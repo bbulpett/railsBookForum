@@ -36,6 +36,7 @@ html {
 	-moz-font-smoothing: antialiased;
 	-o-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+	overflow-x: hidden;
 }
 
 body {
@@ -44,6 +45,10 @@ body {
 	/*line-height: 1.42857143;*/
 	color: #555;
 	background-color: #FFF;
+}
+
+main {
+	padding: 50px;
 }
 
 .heading {
@@ -73,6 +78,7 @@ footer {
 	bottom: 0;
 	width: 100%;
 	color: #fff;
+	margin-top: 150px;
 }
 
 .navbar {
@@ -86,19 +92,20 @@ ul.nav.navbar-nav>li>a {
 	font-size: 16px;
 }
 
-.container {
-	padding: 15px;
-	margin: 0 5%;
-	width: 90%;
+ul.nav.navbar-nav>li.pull-right>a {
+	color: #FFF;
+	background-color: #B63E97;
+	font-size: 16px;
+	border-radius: 25px;
 }
 
 #about-author {
 	float: left;
-	width: 50%;
+	width: 70%;
 }
 
 #about-author a {
-	color: #FFf;
+	color: #FFF;
 	text-decoration: underline;
 	font-weight: 600;
 }
@@ -112,6 +119,11 @@ ul.nav.navbar-nav>li>a {
 	border-left: 1px solid #FFF;
 	padding: 10px 15px 45px;
 	width: 30%;
+}
+
+#registration-form {
+	position: relative;
+	left: 40%;
 }
 
 @media (min-width: 480px) {
@@ -133,9 +145,6 @@ ul.nav.navbar-nav>li>a {
 	#book-info {
 		clear: left;
 		float: none;
-	}
-	footer {
-		margin-top: 700px;
 	}
 }
 

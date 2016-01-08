@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'puma'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Kaminari gem does pagination and stuff
 gem 'kaminari', '0.16.3'
