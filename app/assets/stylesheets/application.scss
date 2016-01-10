@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+/******************** GLOBAL ********************/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
@@ -47,6 +49,10 @@ body {
 	background-color: #FFF;
 }
 
+/******************** COLOR VARIABLES *****************/
+$bookThemeColor: #B63E97;
+
+/******************** PRIMARY DIVS ******************/
 main {
 	padding: 50px;
 }
@@ -73,14 +79,15 @@ main {
 }
 
 footer {
-	background-color: #B63E97;
-	position: absolute;
+	background-color: $bookThemeColor;
+	position: relative;
 	bottom: 0;
 	width: 100%;
 	color: #fff;
-	margin-top: 150px;
+	margin-top: 201px;
 }
 
+/********************** NAVBAR ********************/
 .navbar {
 	background-color: transparent;
 	margin-top: 8px;
@@ -88,17 +95,35 @@ footer {
 }
 
 ul.nav.navbar-nav>li>a {
-	color: #B63E97;
+	color: $bookThemeColor;
 	font-size: 16px;
 }
 
 ul.nav.navbar-nav>li.pull-right>a {
 	color: #FFF;
-	background-color: #B63E97;
+	background-color: $bookThemeColor;
 	font-size: 16px;
 	border-radius: 25px;
+	padding: 5px;
 }
 
+#myNavbar {
+	border: none;
+}
+
+.navbar-brand {
+	color: $bookThemeColor;
+}
+
+.navbar-default .navbar-toggle {
+	background: #FFF;
+	border: 1px solid $bookThemeColor;
+	color: $bookThemeColor;
+}
+
+
+
+/********************** FOOTER ********************/
 #about-author {
 	float: left;
 	width: 70%;
@@ -145,6 +170,9 @@ ul.nav.navbar-nav>li.pull-right>a {
 	#book-info {
 		clear: left;
 		float: none;
+	}
+	footer {
+		position: relative;
 	}
 }
 
@@ -199,3 +227,26 @@ ul.nav.navbar-nav>li.pull-right>a {
 	}
 }
 
+/********************* BUTTONS *******************/
+.btn {
+	font-size: 16px;
+	font-weight: 600;
+	border-radius: 25px;
+	box-shadow: 2px 2px 2px darken($bookThemeColor, 25%);
+}
+
+.btn-dark {
+	color: #FFF;
+	background-color: $bookThemeColor;
+}
+
+.btn-light {
+	color: $bookThemeColor;
+	background-color: #FFF;
+}
+
+.btn-xl {
+	font-size: 18px;
+	padding: 15px 20px;
+	border-radius: 30px;
+}
