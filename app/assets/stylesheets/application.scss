@@ -55,6 +55,7 @@ $bookThemeColor: #B63E97;
 /******************** PRIMARY DIVS ******************/
 main {
 	padding: 50px;
+	margin-bottom: 550px;
 }
 
 .heading {
@@ -80,11 +81,10 @@ main {
 
 footer {
 	background-color: $bookThemeColor;
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	width: 100%;
 	color: #fff;
-	margin-top: 50px;
 }
 
 #registration-form {
@@ -171,9 +171,6 @@ ul.nav.navbar-nav>li.pull-right>a {
 	#book-info {
 		clear: left;
 		float: none;
-	}
-	footer {
-		position: relative;
 	}
 }
 
