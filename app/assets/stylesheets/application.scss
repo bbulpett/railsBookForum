@@ -75,10 +75,6 @@ main {
 	text-align: center;
 }
 
-.share-button a>i {
-	margin-right: 5px;
-}
-
 footer {
 	background-color: $bookThemeColor;
 	position: absolute;
@@ -95,8 +91,15 @@ footer {
 /********************** NAVBAR ********************/
 .navbar {
 	background-color: transparent;
-	margin-top: 8px;
 	border: none;
+}
+
+.navbar a>i {
+	margin-right: 5px;
+}
+
+.navbar-header {
+	background-color: #F5F5F5;
 }
 
 ul.nav.navbar-nav>li>a {
@@ -116,7 +119,11 @@ ul.nav.navbar-nav>li.pull-right>a {
 	border: none;
 }
 
-.navbar-brand {
+a.navbar-brand {
+	color: $bookThemeColor;
+}
+
+a.navbar-brand:visited {
 	color: $bookThemeColor;
 }
 
@@ -125,8 +132,6 @@ ul.nav.navbar-nav>li.pull-right>a {
 	border: 1px solid $bookThemeColor;
 	color: $bookThemeColor;
 }
-
-
 
 /******************* FOOTER - INTERNAL DIVS *****************/
 #about-author {
@@ -172,21 +177,31 @@ ul.nav.navbar-nav>li.pull-right>a {
 		clear: left;
 		float: none;
 	}
+	.navbar {
+		margin-top: 0;
+	}
 }
 
 @media (min-width: 768px) {
 	.heading h1 {
 		font-size: 40px;
 	}
+
+	.navbar {
+		margin-top: 8px;
+	}
+
 	.navbar-brand {
 		display: none;
 	}
+
 	ul.nav.navbar-nav>li.active a {
 		background-color: transparent;
 		border-top: 8px solid #E7E7E7;
 		margin-top: -8px;
 		text-decoration: none;
 	}
+
 	/* centered navigation */
 	 .nav.navbar-nav {
 	     float: left;
@@ -227,10 +242,12 @@ ul.nav.navbar-nav>li.pull-right>a {
 
 /********************* BUTTONS *******************/
 .btn {
-	font-size: 16px;
+	padding: 3px 12px;
+	font-size: 14px;
 	font-weight: 600;
 	border-radius: 25px;
 	box-shadow: 2px 2px 2px darken($bookThemeColor, 25%);
+	margin: 10px;
 }
 
 .btn-dark {
@@ -238,13 +255,28 @@ ul.nav.navbar-nav>li.pull-right>a {
 	background-color: $bookThemeColor;
 }
 
+.btn-dark i {
+	color: #FFF;
+	font-size: 14px;
+	font-weight: 600;
+}
+
 .btn-light {
 	color: $bookThemeColor;
 	background-color: #FFF;
+	border: 1px solid #DDD;
+}
+
+.navbar-nav .btn-sm {
+	padding: 3px 12px;
 }
 
 .btn-xl {
 	font-size: 18px;
 	padding: 15px 20px;
 	border-radius: 30px;
+}
+
+a.btn.btn-sm.btn-dark:hover {
+	background-color: darken($bookThemeColor, 15%);
 }

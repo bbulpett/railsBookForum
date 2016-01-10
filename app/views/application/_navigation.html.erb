@@ -16,7 +16,21 @@
         <li><a href="#">Errata</a></li> 
         <li><a href="#">Examples</a></li>
         <li class="share-button"><a href="#"><i class="fa fa-share-square-o"></i>Share</a></li>
-        <li class="btn btn-dark pull-right"><%= link_to "Sign Up", new_user_path %></li>
+        <% if current_user %>
+          <li><%= link_to session_path("current"), class: "btn btn-sm btn-dark", method: "delete" do %>
+              <i class="fa fa-sign-out"> Log Out</i>
+            <% end %>
+          </li>
+        <% else %>
+          <li><%= link_to new_user_path, class: "btn btn-sm btn-dark" do%>
+              <i class="fa fa-user-plus"> Sign Up</i>
+            <% end %>
+          </li>
+          <li><%= link_to new_session_path, class: "btn btn-sm btn-light" do%>
+              <i class="fa fa-sign-in"> Log In</i>
+            <% end %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
