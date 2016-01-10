@@ -84,7 +84,12 @@ footer {
 	bottom: 0;
 	width: 100%;
 	color: #fff;
-	margin-top: 201px;
+	margin-top: 50px;
+}
+
+#registration-form {
+	position: relative;
+	left: 40%;
 }
 
 /********************** NAVBAR ********************/
@@ -123,7 +128,7 @@ ul.nav.navbar-nav>li.pull-right>a {
 
 
 
-/********************** FOOTER ********************/
+/******************* FOOTER - INTERNAL DIVS *****************/
 #about-author {
 	float: left;
 	width: 70%;
@@ -146,11 +151,7 @@ ul.nav.navbar-nav>li.pull-right>a {
 	width: 30%;
 }
 
-#registration-form {
-	position: relative;
-	left: 40%;
-}
-
+/******************* MEDIA QUERIES *********************/
 @media (min-width: 480px) {
 	.heading h1 {
 		font-size: 32px;
