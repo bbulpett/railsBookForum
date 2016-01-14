@@ -11,10 +11,10 @@
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to "Home", root_path %></li>
         <li><a href="#">Forum</a></li>
-        <li><a href="#">Praise</a></li> 
-        <li><a href="#">Preface</a></li> 
-        <li><a href="#">Errata</a></li> 
-        <li><a href="#">Examples</a></li>
+        <li><%= link_to "Praise", static_praise_path %></li> 
+        <li><%= link_to "Preface", static_preface_path %></li> 
+        <li><%= link_to "Errata", static_errata_path %></li> 
+        <li><%= link_to "Examples", static_examples_path %></li>
         <li class="share-button"><a href="#"><i class="fa fa-share-square-o"></i>Share</a></li>
         <% if current_user %>
           <li><%= link_to session_path("current"), class: "btn btn-sm btn-dark", method: "delete" do %>
