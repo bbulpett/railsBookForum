@@ -136,7 +136,8 @@ a.navbar-brand:visited {
 /******************* FOOTER - INTERNAL DIVS *****************/
 #about-author {
 	float: left;
-	width: 70%;
+	width: 65%;
+	padding: 15px;
 }
 
 #about-author a {
@@ -149,11 +150,19 @@ a.navbar-brand:visited {
 	font-size: 16px;
 }
 
+#about-author img {
+	width: 260px;
+	border: 2px solid #FFF;
+	border-radius: 50%;
+	float: left;
+}
+
 #book-info {
 	float: right;
 	border-left: 1px solid #FFF;
 	padding: 10px 15px 45px;
 	width: 30%;
+	margin: 15px;
 }
 
 /******************* MEDIA QUERIES *********************/
