@@ -136,8 +136,9 @@ a.navbar-brand:visited {
 /******************* FOOTER - INTERNAL DIVS *****************/
 #about-author {
 	float: left;
-	width: 65%;
+	width: 60%;
 	padding: 15px;
+	margin: 15px;
 }
 
 #about-author a {
@@ -155,14 +156,27 @@ a.navbar-brand:visited {
 	border: 2px solid #FFF;
 	border-radius: 50%;
 	float: left;
+	margin: 15px;
 }
 
 #book-info {
 	float: right;
 	border-left: 1px solid #FFF;
-	padding: 10px 15px 45px;
+	padding: 0 20px 50px;
 	width: 30%;
-	margin: 15px;
+	margin: 50px 15px;
+}
+
+#book-info h3 {
+	margin: 0;
+}
+
+#book-info ul {
+	list-style-type: none;
+}
+
+.author-social i{
+	margin: 10px;
 }
 
 /******************* MEDIA QUERIES *********************/
