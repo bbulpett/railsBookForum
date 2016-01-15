@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  mount Thredded::Engine => '/forum'
   # get 'sessions/new'
   resources :sessions
 
