@@ -55,7 +55,7 @@ $bookThemeColor: #B63E97;
 /******************** PRIMARY DIVS ******************/
 main {
 	padding: 50px;
-	margin-bottom: 550px;
+	margin-bottom: 500px;
 }
 
 .heading {
@@ -136,7 +136,6 @@ a.navbar-brand:visited {
 /******************* FOOTER - INTERNAL DIVS *****************/
 #about-author {
 	float: left;
-	width: 60%;
 	padding: 15px;
 	margin: 15px;
 }
@@ -152,7 +151,7 @@ a.navbar-brand:visited {
 }
 
 #about-author img {
-	width: 260px;
+	width: 250px;
 	border: 2px solid #FFF;
 	border-radius: 50%;
 	float: left;
@@ -203,6 +202,10 @@ a.navbar-brand:visited {
 	.navbar {
 		margin-top: 0;
 	}
+
+	#about-author {
+	width: 100%;
+	}
 }
 
 @media (min-width: 768px) {
@@ -248,6 +251,10 @@ a.navbar-brand:visited {
 	 	#book-info {
 	 	clear: none;
 		float: right;
+	}
+
+	#about-author {
+	width: 60%;
 	}
 }
 
@@ -300,6 +307,10 @@ a.navbar-brand:visited {
 	border-radius: 30px;
 }
 
-a.btn.btn-sm.btn-dark:hover {
-	background-color: darken($bookThemeColor, 15%);
+.btn-xl {
+	color: #FFF !important;
+}
+
+a.btn.btn-dark:hover {
+	background-color: darken($bookThemeColor, 15%) !important;
 }
