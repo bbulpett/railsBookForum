@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :forums
   # get 'sessions/new'
   resources :sessions
-
   resources :users
+  
 	root 'static#home'
 
   get 'static/home'

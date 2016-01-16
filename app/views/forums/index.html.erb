@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <th>Forum</th>
+      <th>Last Post</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,11 +14,16 @@
   <tbody>
     <% @forums.each do |forum| %>
       <tr>
-        <td><%= forum.name %></td>
+        <td>
+          <h4><%= link_to (forum.name), forum_path(forum.id) %></h4>
+          <small><%= forum.topics.count %> topics</small>
+          <br>
+          <%= forum.description %>
+        </td>
         <td><%= forum.description %></td>
         <td><%= link_to 'Show', forum %></td>
         <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
-        <td><%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', forum, method: :delete, confirm: 'Are you sure?' %></td>
       </tr>
     <% end %>
   </tbody>
