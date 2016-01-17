@@ -55,7 +55,7 @@ $bookThemeColor: #B63E97;
 /******************** PRIMARY DIVS ******************/
 main {
 	padding: 50px;
-	margin-bottom: 500px;
+	margin-bottom: 720px;
 }
 
 .heading {
@@ -313,4 +313,45 @@ a.navbar-brand:visited {
 
 a.btn.btn-dark:hover {
 	background-color: darken($bookThemeColor, 15%) !important;
+}
+
+.share-button {
+	ul {
+		width: 248px !important;
+		padding: 0; 
+		list-style-type: none;
+		text-indent: none;
+	}
+	li {
+		display: inline;
+		padding: 0;
+		margin: 0 -2px;
+	}
+	.dropdown-menu i {
+		color: #FFF;
+		text-align: center;
+		height: 50px;
+		width: 50px;
+		margin: 0;
+		padding: 10px;
+	}
+	i.fa-pinterest {
+		background: #c5282f
+	}
+	i.fa-twitter {
+		background: #6cdfea
+	}
+	i.fa-facebook {
+		background: #3b5998
+	}
+	i.fa-google-plus {
+		background: #e34429
+	}
+	i.fa-paper-plane {
+		background: #00aaa7
+	}
+}
+
+.share-links {
+	
 }
