@@ -2,7 +2,7 @@
 
 <h1>Forums</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Forum</th>
@@ -31,4 +31,8 @@
 
 <br>
 
-<%= link_to 'New Forum', new_forum_path %>
+<% if current_user.admin %>
+  <%= link_to new_forum_path, class: "btn btn-xl btn-success" do %>
+    <i class="fa fa-plus"></i> <strong>New Forum</strong>
+  <% end %>
+<% else end %>

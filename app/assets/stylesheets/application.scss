@@ -276,13 +276,13 @@ a.navbar-brand:visited {
 	font-size: 14px;
 	font-weight: 600;
 	border-radius: 25px;
-	box-shadow: 2px 2px 2px darken($bookThemeColor, 25%);
 	margin: 10px;
 }
 
 .btn-dark {
 	color: #FFF;
 	background-color: $bookThemeColor;
+	box-shadow: 2px 2px 2px darken($bookThemeColor, 25%);
 }
 
 .btn-dark i {
@@ -295,10 +295,15 @@ a.navbar-brand:visited {
 	color: $bookThemeColor;
 	background-color: #FFF;
 	border: 1px solid #DDD;
+	box-shadow: 2px 2px 2px darken($bookThemeColor, 25%);
 }
 
 .navbar-nav .btn-sm {
 	padding: 3px 12px;
+}
+
+.btn-success {
+	box-shadow: 2px 2px 2px #060;
 }
 
 .btn-xl {
