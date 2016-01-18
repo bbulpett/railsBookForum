@@ -31,7 +31,7 @@
 
 <br>
 
-<% if current_user.admin %>
+<% if current_user && current_user.admin %>
   <%= link_to new_forum_path, class: "btn btn-xl btn-success" do %>
     <i class="fa fa-plus"></i> <strong>New Forum</strong>
   <% end %>
