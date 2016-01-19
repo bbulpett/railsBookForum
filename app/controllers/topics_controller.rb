@@ -1,10 +1,11 @@
 class TopicsController < ApplicationController
+  before_action :get_forum
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+    @topics = @forum.topics
   end
 
   # GET /topics/1
@@ -28,11 +29,9 @@ class TopicsController < ApplicationController
 
     respond_to do |format|
       if @topic.save
-          format.html { redirect_to forum_topics_url(@forum), notice: 'Topic was successfully created.' }
-          format.json { render :show, status: :created, location: @topic }
-        else 
-          format.html { redirect_to new_topic_path }
-        end
+            format.html { redirect_to forum_path(@forum), notice: 'Topic was successfully created.' }
+            format.json { render :show, status: :created, location: @topic }
+
       else
         format.html { render :new }
         format.json { render json: @topic.errors, status: :unprocessable_entity }
@@ -59,7 +58,7 @@ class TopicsController < ApplicationController
   def destroy
     @topic.destroy
     respond_to do |format|
-      format.html { redirect_to topics_url, notice: 'Topic was successfully destroyed.' }
+      format.html { redirect_to forum_topics_url, notice: 'Topic was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,13 +68,13 @@ class TopicsController < ApplicationController
     def get_forum
       @forum = Forum.find(params[:forum_id])
     end
-    
+
     def set_topic
       @topic = Topic.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:name, :last_poster_id, :last_post_at, :forum_id)
+      params.require(:topic).permit(:name, :last_poster_id, :last_post_at, :forum_id, posts_attributes: [ :id, :content ])
     end
 end

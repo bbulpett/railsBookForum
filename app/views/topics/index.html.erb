@@ -18,9 +18,10 @@
         <td><%= topic.name %></td>
         <td><%= topic.last_poster_id %></td>
         <td><%= topic.last_post_at %></td>
-        <td><%= link_to 'Show', topic %></td>
-        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="right"></td>
+        <td><%= link_to "Show", [ @forum, topic ] %></td>
+        <td><%= link_to "Edit", edit_forum_topic_path( @forum, topic ) %></td>
+        <td><%= link_to "Destroy", [ @forum, topic ], :confirm => 'Are you sure?', :method => :delete %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Topic', new_topic_path %>
+<%= link_to 'New Topic', new_forum_topic_path(@forum) %>

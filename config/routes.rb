@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
 
   resources :posts
-  resources :topics
-  resources :forums
+
+  resources :forums do
+    resources :topics
+
+    # member do
+    #   get :posts
+    # end
+  end
   # get 'sessions/new'
   resources :sessions
   resources :users
-  
+
 	root 'static#home'
 
   get 'static/home'
