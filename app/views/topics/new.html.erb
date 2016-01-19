@@ -2,4 +2,6 @@
 
 <%= render 'form', topic: @topic %>
 
-<%= link_to 'Back', topics_path %>
+<%= link_to topics_path, class: "btn btn-dark", style: "color: #FFF;" do %>
+    <i class="fa fa-backward"></i> <strong>Back</strong>
+<% end %>
