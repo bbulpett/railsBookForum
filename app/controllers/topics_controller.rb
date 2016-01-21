@@ -26,6 +26,8 @@ class TopicsController < ApplicationController
   # POST /topics.json
   def create
     @topic = @forum.topics.build(topic_params)
+    @topic.last_post_at = Time.now
+    @topic.user_id = @current_user
 
     respond_to do |format|
       if @topic.save
@@ -75,6 +77,6 @@ class TopicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:name, :last_poster_id, :last_post_at, :forum_id, posts_attributes: [ :id, :content ])
+      params.require(:topic).permit(:name, :last_poster_id, :last_post_at, :forum_id, :user_id, posts_attributes: [ :id, :content, ])
     end
 end
