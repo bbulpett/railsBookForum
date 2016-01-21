@@ -20,7 +20,13 @@
           <br>
           <%= forum.description %>
         </td>
-        <td><%= forum.description %></td>
+        <td class="right">
+          <% if forum.most_recent_post %>
+            Posted at <%= forum.most_recent_post.last_post_at %>
+          <% else %>
+            No posts yet
+          <% end %>
+        </td>
         <td><%= link_to 'Show', forum %></td>
         <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
         <td><%= link_to 'Destroy', forum, method: :delete, confirm: 'Are you sure?' %></td>
