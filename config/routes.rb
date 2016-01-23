@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get 'static/home'
 
-  get 'static/praise'
+  get 'static/media'
 
   get 'static/preface'
 
