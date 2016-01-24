@@ -1,11 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  title: MyString
   last_poster_id: 1
-  last_post_at: 2016-01-16 12:13:52
+  last_post_at: 2016-01-24 15:08:38
+  tags: MyText
+  forum: 
+  user: 
 
 two:
-  name: MyString
+  title: MyString
   last_poster_id: 1
-  last_post_at: 2016-01-16 12:13:52
+  last_post_at: 2016-01-24 15:08:38
+  tags: MyText
+  forum: 
+  user: 

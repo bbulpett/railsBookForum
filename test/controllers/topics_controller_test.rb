@@ -17,7 +17,7 @@ class TopicsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create topic" do
     assert_difference('Topic.count') do
-      post topics_url, params: { topic: { last_post_at: @topic.last_post_at, last_poster_id: @topic.last_poster_id, name: @topic.name } }
+      post topics_url, params: { topic: { forum_id: @topic.forum_id, last_post_at: @topic.last_post_at, last_poster_id: @topic.last_poster_id, tags: @topic.tags, title: @topic.title, user_id: @topic.user_id } }
     end
 
     assert_redirected_to topic_path(Topic.last)
@@ -34,7 +34,7 @@ class TopicsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update topic" do
-    patch topic_url(@topic), params: { topic: { last_post_at: @topic.last_post_at, last_poster_id: @topic.last_poster_id, name: @topic.name } }
+    patch topic_url(@topic), params: { topic: { forum_id: @topic.forum_id, last_post_at: @topic.last_post_at, last_poster_id: @topic.last_poster_id, tags: @topic.tags, title: @topic.title, user_id: @topic.user_id } }
     assert_redirected_to topic_path(@topic)
   end
 
