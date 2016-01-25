@@ -15,3 +15,9 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	$('[id=flip]').click(function(){
+		$(this).next().slideToggle('fast');
+	});
+});

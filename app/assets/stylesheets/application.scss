@@ -364,3 +364,14 @@ a.btn.btn-dark:hover {
 .btn-warning {
 	box-shadow: 2px 2px 2px #999;
 }
+
+/********************* JQUERY ELEMENTS *******************/
+#panel {
+	padding: 25px 50px;
+	display: none;
+}
+
+#flip {
+	color: lighten($bookThemeColor, 20%);
+	cursor: pointer;
+}
