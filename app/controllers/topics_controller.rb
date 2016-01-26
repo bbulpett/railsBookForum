@@ -1,10 +1,11 @@
 class TopicsController < ApplicationController
+  before_action :get_forum
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+    @topics = @forum.topics
   end
 
   # GET /topics/1
@@ -14,7 +15,7 @@ class TopicsController < ApplicationController
 
   # GET /topics/new
   def new
-    @topic = Topic.new
+    @topic = @forum.topics.build
   end
 
   # GET /topics/1/edit
@@ -24,7 +25,7 @@ class TopicsController < ApplicationController
   # POST /topics
   # POST /topics.json
   def create
-    @topic = Topic.new(topic_params)
+    @topic = @forum.topics.build(topic_params)
 
     respond_to do |format|
       if @topic.save
@@ -63,6 +64,10 @@ class TopicsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def get_forum
+      @forum = Forum.find(params[:forum_id])
+    end
+
     def set_topic
       @topic = Topic.find(params[:id])
     end

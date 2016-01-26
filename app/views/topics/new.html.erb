@@ -1,5 +1,5 @@
-<h1>New Topic</h1>
+<h2>New Topic for <%= @forum.name %> Forum</h2>
 
 <%= render 'form', topic: @topic %>
 
-<%= link_to 'Back', topics_path %>
+<%= link_to 'Back', forum_path(@forum) %>

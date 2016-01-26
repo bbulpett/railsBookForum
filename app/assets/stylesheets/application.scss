@@ -304,6 +304,7 @@ a.navbar-brand:visited {
 
 .btn-success {
 	box-shadow: 2px 2px 2px #060;
+	color: #FFF !important;
 }
 
 .btn-xl {
@@ -363,6 +364,16 @@ a.btn.btn-dark:hover {
 
 .btn-warning {
 	box-shadow: 2px 2px 2px #999;
+}
+
+.btn-danger {
+	box-shadow: 2px 2px 2px #400;
+}
+
+.btn-sm {
+	color: #FFF !important;
+	margin: 2px;
+	font-size: 8pt;
 }
 
 /********************* JQUERY ELEMENTS *******************/

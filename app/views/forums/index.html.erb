@@ -7,7 +7,9 @@
     <tr>
       <th>Forum</th>
       <th>Last Post</th>
-      <th colspan="3"></th>
+    <% if current_user && current_user.admin %>
+      <th>Actions</th>
+    <% end %>
     </tr>
   </thead>
 
@@ -27,9 +29,19 @@
             No posts yet
           <% end %>
         </td>
-        <td><%= link_to 'Show', forum %></td>
-        <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
-        <td><%= link_to 'Destroy', forum, method: :delete, confirm: 'Are you sure?' %></td>
+        <% if current_user && current_user.admin %>
+          <td><%= link_to forum, class: "btn btn-sm btn-primary" do %>
+                        <i class="fa fa-eye"></i> <strong>SHOW</strong>
+              <% end %>
+              <br>
+              <%= link_to edit_forum_path(forum), class: "btn btn-sm btn-warning" do %>
+                        <i class="fa fa-wrench"></i> <strong>EDIT</strong>
+              <% end %>
+              <br>
+              <%= link_to forum, method: :delete, confirm: 'Are you sure?', class: "btn btn-sm btn-danger" do %>
+                        <i class="fa fa-bomb"></i> <strong>DESTROY</strong>
+              <% end %>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -38,7 +50,7 @@
 <br>
 
 <% if current_user && current_user.admin %>
-  <%= link_to new_forum_path, class: "btn btn-xl btn-success" do %>
+  <%= link_to new_forum_path, class: "btn btn-l btn-success" do %>
     <i class="fa fa-plus"></i> <strong>New Forum</strong>
   <% end %>
 <% else end %>
