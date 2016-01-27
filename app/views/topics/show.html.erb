@@ -2,7 +2,7 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @topic.title %>
+  <em><%= @topic.title %></em>
 </p>
 
 <p>
@@ -15,20 +15,20 @@
   <%= @topic.last_post_at %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Tags:</strong>
   <%= @topic.tags %>
-</p>
+</p> -->
 
 <p>
   <strong>Forum:</strong>
-  <%= @topic.forum %>
+  <%= @topic.forum.name %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @topic.user %>
+  <%= @topic.user.username %>
 </p>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
+<%= link_to 'Edit', edit_forum_topic_path(@forum, @topic) %> |
+<%= link_to 'Back', forum_path(@forum) %>

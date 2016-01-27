@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h3>
+  <strong>Forum Name:</strong>
   <%= @forum.name %>
-</p>
+</h3>
 
 <p>
   <strong>Description:</strong>
@@ -12,18 +12,27 @@
 
 <table class="table table-bordered table-striped">
   <tr>
-    <th width="60%">Topic Title</th>
+    <th width="40%">Topic Title</th>
     <th width="10%">Replies</th>
-    <th width="30%">Last Post</th>
+    <th width="25%">Last Post</th>
+    <th width="25%">Actions</th>
   </tr>
   <% @forum.topics.each do |topic| %>
     <tr>
-      <td><%= link_to (topic.name), [ @forum, topic ] %>
+      <td><%= link_to (topic.title), [ @forum, topic ] %>
       <td><%= topic.posts.count %></td>
       <td class="right"></td>
-      <td><%= link_to "Show", [ @forum, topic ] %></td>
-      <td><%= link_to "Edit", edit_forum_topic_path( @forum, topic ) %></td>
-      <td><%= link_to "Destroy", [ @forum, topic ], :confirm => 'Are you sure?', :method => :delete %></td>
+      <% if current_user && current_user.admin %>
+        <td><%= link_to [ @forum, topic ], class: "btn btn-xs btn-primary" do %>
+              <i class="fa fa-eye"></i> <strong>SHOW</strong>
+            <% end %>
+            <%= link_to edit_forum_topic_path( @forum, topic ), class: "btn btn-xs btn-warning" do %>
+              <i class="fa fa-wrench"></i> <strong>EDIT</strong>
+            <% end %>
+            <%= link_to [ @forum, topic ], method: :delete, confirm: 'Are you sure?', class: "btn btn-xs btn-danger" do %>
+              <i class="fa fa-bomb"></i> <strong>DESTROY</strong>
+            <% end %>
+      <% end %>
     </tr>
   <% end %>
 </table>

@@ -376,6 +376,13 @@ a.btn.btn-dark:hover {
 	box-shadow: 2px 2px 2px darken($bookThemeColor, 25%);
 }
 
+.btn-xs {
+	color: #FFF !important;
+	margin: 2px;
+	font-size: 6pt;
+	font-weight: 400;
+}
+
 /********************* JQUERY ELEMENTS *******************/
 #panel {
 	padding: 25px 50px;

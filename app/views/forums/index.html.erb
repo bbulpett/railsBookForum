@@ -18,7 +18,7 @@
       <tr>
         <td>
           <h4><%= link_to (forum.name), forum_path(forum.id) %></h4>
-          <small><%= forum.topics.count %> topics</small>
+          <small><%= pluralize(forum.topics.count, "topic") %></small>
           <br>
           <%= forum.description %>
         </td>
