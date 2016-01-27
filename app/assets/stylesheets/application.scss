@@ -291,13 +291,6 @@ a.navbar-brand:visited {
 	font-weight: 600;
 }
 
-.btn-light {
-	color: $bookThemeColor;
-	background-color: #FFF;
-	border: 1px solid #DDD;
-	box-shadow: 2px 2px 2px darken($bookThemeColor, 25%);
-}
-
 .navbar-nav .btn-sm {
 	padding: 3px 12px;
 }
@@ -374,6 +367,13 @@ a.btn.btn-dark:hover {
 	color: #FFF !important;
 	margin: 2px;
 	font-size: 8pt;
+}
+
+.btn-light {
+	color: $bookThemeColor !important;
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	box-shadow: 2px 2px 2px darken($bookThemeColor, 25%);
 }
 
 /********************* JQUERY ELEMENTS *******************/
