@@ -18,3 +18,4 @@
 
 # Ignore database configs
 /config/database.yml
+db/*.sqlite3
