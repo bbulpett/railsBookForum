@@ -1,34 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <em><%= @topic.title %></em>
-</p>
+<div id="topicHeading">
+  <h3 id="topicTitle"><span style="color: #ff54e8;">topic</span> <%= @topic.title %> <span style="color: #88f738;">< <em><%= @forum.name %></em></span></h3>
+  <br>
+  <!-- Edit Topic button -->
+  <% if current_user && current_user.admin %>
+    <%= link_to edit_forum_topic_path(@forum, @topic), class: "btn btn-warning", style: "color: #FFF;" do %>
+      <i class="fa fa-edit"></i> <strong>Edit</strong>
+    <% end %>
+  <% end %>
+  <!-- Back button -->
+  <%= link_to forum_path(@forum), class: "btn btn-dark", style: "color: #FFF;" do %>
+      <i class="fa fa-backward"></i> <strong>Back</strong>
+  <% end %>
+  <table class="table table-bordered">
+    <tr>
+      <td>
+        <strong>Last poster:</strong>
+        <%= @topic.last_poster_id %>
+      </td>
+      <td>
+        <strong>Last post at:</strong>
+        <%= @topic.last_post_at %>
+      </td>
+      <td>
+        <strong>Started by:</strong>
+        <%= @topic.user.username %>
+      </td>
+    </tr>
+  </table>
+</div>
+<!--Post listings for topic -->
 
-<p>
-  <strong>Last poster:</strong>
-  <%= @topic.last_poster_id %>
-</p>
-
-<p>
-  <strong>Last post at:</strong>
-  <%= @topic.last_post_at %>
-</p>
-
-<!-- <p>
-  <strong>Tags:</strong>
-  <%= @topic.tags %>
-</p> -->
-
-<p>
-  <strong>Forum:</strong>
-  <%= @topic.forum.name %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @topic.user.username %>
-</p>
-
-<%= link_to 'Edit', edit_forum_topic_path(@forum, @topic) %> |
-<%= link_to 'Back', forum_path(@forum) %>
+<!--End post listings for topic -->
+<!-- Edit Topic button -->
+<br>
+<% if current_user && current_user.admin %>
+  <%= link_to edit_forum_topic_path(@forum, @topic), class: "btn btn-warning", style: "color: #FFF;" do %>
+    <i class="fa fa-edit"></i> <strong>Edit</strong>
+  <% end %>
+<% end %>
+<!-- Back button -->
+<%= link_to forum_path(@forum), class: "btn btn-dark", style: "color: #FFF;" do %>
+    <i class="fa fa-backward"></i> <strong>Back</strong>
+<% end %>
