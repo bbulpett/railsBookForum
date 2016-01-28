@@ -112,6 +112,23 @@ footer {
   margin-right: auto;
 }
 
+#videoGallery {
+	ul {
+		text-align: center;
+		padding-left: 30px;
+	}
+
+	li.list-group-item {
+		display: inline-block;
+		width: 320px; 
+		height: 220px;
+		border: none;
+		background: #CCC;
+		margin: 15px;
+		padding: 0;
+	}
+}
+
 /********************** NAVBAR ********************/
 .navbar {
 	background-color: transparent;

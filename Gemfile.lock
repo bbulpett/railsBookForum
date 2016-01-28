@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/galetahub/ckeditor.git
+  revision: 8c95708276dd9e8a9b5760abff18a298b86851f8
+  specs:
+    ckeditor (4.1.6)
+      cocaine
+      orm_adapter (~> 0.5.0)
+
+GIT
   remote: git://github.com/rails/coffee-rails.git
   revision: 29604a59a5d7ea314f54bb52302d68ef134806bf
   specs:
@@ -95,6 +103,11 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (8.2.1)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     celluloid (0.17.2)
       celluloid-essentials
       celluloid-extras
@@ -112,6 +125,10 @@ GEM
       timers (>= 4.1.1)
     celluloid-supervision (0.20.5)
       timers (>= 4.1.1)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -151,11 +168,13 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.99)
+    mini_magick (4.3.6)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
+    orm_adapter (0.5.0)
     pg (0.18.4)
     puma (2.15.3)
     rack (2.0.0.alpha)
@@ -209,11 +228,14 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3.6)
   byebug
+  carrierwave
+  ckeditor!
   coffee-rails!
   font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
   kaminari (= 0.16.3)
+  mini_magick
   pg (~> 0.18)
   puma
   rails!
@@ -222,3 +244,6 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console!
+
+BUNDLED WITH
+   1.11.2

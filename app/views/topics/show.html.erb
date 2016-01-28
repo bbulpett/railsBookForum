@@ -27,7 +27,9 @@
         <strong>Started by:</strong>
         <%= @topic.user.username %>
       </td>
-    </tr>
+    <% @topic.posts each do |post| %>
+      <tr><%= post.content %></tr>
+    <% end %>
   </table>
 </div>
 <!--Post listings for topic -->

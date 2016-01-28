@@ -12,10 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
+    <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
 
+  <div class="field">
+    <%= f.fields_for :posts do |post| %>
+      <%= post.label :content %><br>
+      <%= post.cktext_area :content, class: 'ckeditor' %>
+    <% end %>
+  </div>
 <!--   <div class="field">
     <%= f.label :tags %>
     <%= f.text_area :tags %>

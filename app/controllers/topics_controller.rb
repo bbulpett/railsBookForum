@@ -77,4 +77,8 @@ class TopicsController < ApplicationController
     def topic_params
       params.require(:topic).permit(:title, :last_poster_id, :last_post_at, :tags, :forum_id, :user_id)
     end
+
+    def post_params
+      params.require(:post).permit(:content, :forum_id, :topic_id, :user_id)
+    end
 end
