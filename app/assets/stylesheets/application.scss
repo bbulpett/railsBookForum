@@ -92,6 +92,26 @@ footer {
 	left: 40%;
 }
 
+#topicHeading {
+	text-align: center;
+
+	td {
+		width: 33%;
+	}
+}
+
+#topicTitle {
+	font-size: 115%;
+	font-family: Consolas, monaco, monospace;
+	background: #333;
+	color: #FFF;
+	padding: 5px 10px;
+	border-radius: 4px;
+	display: inline-block;
+	margin-left: auto;
+  margin-right: auto;
+}
+
 /********************** NAVBAR ********************/
 .navbar {
 	background-color: transparent;
