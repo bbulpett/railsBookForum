@@ -18,17 +18,12 @@
 
   <div class="field">
     <%= f.fields_for :posts do |builder| %>
-      <%= builder.label :content %><br>
-      <%= builder.cktext_area :content, class: 'ckeditor' %>
+        <%= builder.label :content %><br>
+        <%= builder.cktext_area :content, class: 'ckeditor' %>
     <% end %>
   </div>
-<!--   <div class="field">
-    <%= f.label :tags %>
-    <%= f.text_area :tags %>
-  </div>
- -->
 
-  <div class="actions">
+  <div class="actions">   
     <%= f.submit 'Create Topic', class: "btn btn-l btn-success" %>
   </div>
 <% end %>

@@ -27,8 +27,11 @@ class TopicsController < ApplicationController
   # POST /topics
   # POST /topics.json
   def create
-    @topic = @forum.topics.build(topic_params.merge(user_id: current_user.id))
+    @topic = @forum.topics.new(topic_params)
+    @topic.user= current_user
     @topic.last_poster_id = @topic.user_id
+
+    @post = @topic.posts.new
 
     respond_to do |format|
       if @topic.save
@@ -77,7 +80,7 @@ class TopicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:title, :last_poster_id, :last_post_at, :tags, :forum_id, :user_id, posts_attributes: [:content])
+      params.require(:topic).permit(:title, :last_poster_id, :last_post_at, :tags, :forum_id, :user_id, posts_attributes: [:id, :content])
     end
 
 end
