@@ -31,7 +31,7 @@ class TopicsController < ApplicationController
     @topic.user= current_user
     @topic.last_poster_id = @topic.user_id
 
-    @post = @topic.posts.new
+    @topic.post.topic = @topic.id
 
     respond_to do |format|
       if @topic.save
@@ -80,7 +80,7 @@ class TopicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:title, :last_poster_id, :last_post_at, :tags, :forum_id, :user_id, posts_attributes: [:id, :content])
+      params.require(:topic).permit(:title, :last_poster_id, :last_post_at, :tags, :forum_id, :user_id, posts_attributes: [:id, :content, :topic_id, :user_id])
     end
 
 end
