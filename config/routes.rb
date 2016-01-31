@@ -14,17 +14,11 @@ Rails.application.routes.draw do
   resources :users
 
 	root 'static#home'
-
   get 'static/home'
-
-  get 'static/media'
-
-  get 'static/preface'
-
-  get 'static/errata'
-
-  get 'static/examples'
-
+  get 'screencasts' => 'static#media'
+  get 'preface' => 'static#preface'
+  get 'errata' => 'static#errata'
+  get 'examples' => 'static#examples'
   get 'static/share'
 
   mount Ckeditor::Engine => '/ckeditor'
