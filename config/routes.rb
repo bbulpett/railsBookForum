@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :posts
-
   resources :forums do
-    resources :topics
-
-    # member do
-    #   get :posts
-    # end
+    resources :topics do
+      resources :posts
+    end
   end
   # get 'sessions/new'
   resources :sessions

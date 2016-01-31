@@ -1,4 +1,4 @@
-class Topic < ApplicationRecord
+class Topic < ActiveRecord::Base
   belongs_to :forum
   belongs_to :user
 
