@@ -27,10 +27,17 @@
         <strong>Started by:</strong>
         <%= @topic.user.username %>
       </td>
+  </table>
+  <% if @topic.posts.any? %>
     <% @topic.posts each do |post| %>
       <tr><%= post.content %></tr>
     <% end %>
-  </table>
+  <% else %>
+    <br>
+    <div class="jumbotron">
+      <h3>Nothing to see here...</h3>
+    </div>
+  <% end %>
 </div>
 <!--Post listings for topic -->
 
