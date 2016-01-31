@@ -16,10 +16,12 @@ class TopicsController < ApplicationController
   # GET /topics/new
   def new
     @topic = @forum.topics.build
+    @topic.posts.build
   end
 
   # GET /topics/1/edit
   def edit
+    # @topic.posts.build
   end
 
   # POST /topics
@@ -75,10 +77,7 @@ class TopicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:title, :last_poster_id, :last_post_at, :tags, :forum_id, :user_id)
+      params.require(:topic).permit(:title, :last_poster_id, :last_post_at, :tags, :forum_id, :user_id, posts_attributes: [:content])
     end
 
-    def post_params
-      params.require(:post).permit(:content, :forum_id, :topic_id, :user_id)
-    end
 end
