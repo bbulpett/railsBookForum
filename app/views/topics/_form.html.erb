@@ -17,7 +17,7 @@
     </div>
 
     <div class="field">
-      <%= f.fields_for :posts, @forum.topics.build.posts.build do |p| %>
+      <%= f.fields_for :posts do |p| %>
           <%= p.label :content %><br>
           <%= p.cktext_area :content, class: 'ckeditor' %>
       <% end %>

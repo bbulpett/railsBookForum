@@ -16,7 +16,6 @@ class TopicsController < ApplicationController
   # GET /topics/new
   def new
     @topic = Topic.new
-    @topic.posts.build
     # @topic.posts.build
   end
 
@@ -37,6 +36,7 @@ class TopicsController < ApplicationController
 
     respond_to do |format|
       if @topic.save
+        @forum.topics.last.posts.create(content:'Hard-coded Controller Test', forum_id: @forum.id, topic_id: @topic.id, user_id: current_user.id)
 
         format.html { redirect_to forum_topic_path(@forum, @topic), notice: 'Topic was successfully created.' }
         format.json { render :show, status: :created, location: @topic }
@@ -83,7 +83,7 @@ class TopicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:id, :title, :last_poster_id, :last_post_at, :tags, posts_attributes: [:id, :content, :user_id, :topic_id, :forum_id])
+      params.require(:topic).permit(:id, :title, :last_poster_id, :last_post_at, :tags, posts_attributes: [:id, :content])
     end
 
 end
