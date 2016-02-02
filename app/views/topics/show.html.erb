@@ -29,7 +29,7 @@
       </td>
   </table>
   <% if @topic.posts.any? %>
-    <% @topic.posts each do |post| %>
+    <% @topic.posts.each do |post| %>
       <tr><%= post.content %></tr>
     <% end %>
   <% else %>
