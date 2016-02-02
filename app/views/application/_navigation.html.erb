@@ -44,3 +44,9 @@
     </div>
   </div>
 </nav>
+<script>
+  $("ul.nav.navbar-nav>li a").on("click", function(){
+    $("ul.nav.navbar-nav").find(".active").removeClass("active");
+    $(this).parent().addClass("active");
+  });
+</script>

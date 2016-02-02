@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   resources :sessions
   resources :users
 
-	root 'static#home'
   get 'static/home'
   get 'screencasts' => 'static#media'
   get 'preface' => 'static#preface'
@@ -18,8 +17,6 @@ Rails.application.routes.draw do
   get 'static/share'
 
   mount Ckeditor::Engine => '/ckeditor'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  # Serve websocket cable requests in-process
-  # mount ActionCable.server => '/cable'
+  root 'static#home'
 end

@@ -1,29 +1,30 @@
 <%= form_for([ @forum, topic ]) do |f| %>
-  <% if topic.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
+  <div class="form-group">
+    <% if topic.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
 
-      <ul>
-      <% topic.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.fields_for :topic_posts, f.object.posts.build do |builder| %>
-        <%= builder.label :content %><br>
-        <%= builder.cktext_area :content, class: 'ckeditor' %>
+        <ul>
+        <% topic.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
     <% end %>
-  </div>
 
-  <div class="actions">   
-    <%= f.submit 'Create Topic', class: "btn btn-l btn-success" %>
+    <div class="field">
+      <%= f.text_field :title, placeholder: "Title", class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.fields_for :posts, @forum.topics.build.posts.build do |p| %>
+          <%= p.label :content %><br>
+          <%= p.cktext_area :content, class: 'ckeditor' %>
+      <% end %>
+    </div>
+
+    <div class="form-group actions">   
+      <%= f.submit 'Create Topic', class: "btn btn-l btn-success" %>
+    </div>
   </div>
 <% end %>
