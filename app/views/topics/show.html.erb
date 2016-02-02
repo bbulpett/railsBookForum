@@ -25,7 +25,7 @@
       </td>
       <td>
         <strong>Started by:</strong>
-        <%= @topic.user.username %>
+        <%= @topic.last_poster_id %>
       </td>
   </table>
   <% if @topic.posts.any? %>

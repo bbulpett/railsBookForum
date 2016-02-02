@@ -38,7 +38,7 @@
                         <i class="fa fa-wrench"></i> <strong>EDIT</strong>
               <% end %>
               <br>
-              <%= link_to forum, method: :delete, confirm: 'Are you sure?', class: "btn btn-sm btn-danger" do %>
+              <%= link_to forum, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-sm btn-danger" do %>
                         <i class="fa fa-bomb"></i> <strong>DESTROY</strong>
               <% end %>
         <% end %>
