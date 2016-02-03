@@ -31,7 +31,7 @@
             <%= link_to edit_forum_topic_path( @forum, topic ), class: "btn btn-xs btn-warning" do %>
               <i class="fa fa-wrench"></i> <strong>EDIT</strong>
             <% end %>
-            <%= link_to [ @forum, topic ], method: :delete, confirm: 'Are you sure?', class: "btn btn-xs btn-danger" do %>
+            <%= link_to [ @forum, topic ], method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" do %>
               <i class="fa fa-bomb"></i> <strong>DESTROY</strong>
             <% end %>
       <% end %>
