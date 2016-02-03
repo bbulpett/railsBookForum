@@ -175,6 +175,16 @@ a.navbar-brand:visited {
 }
 
 /******************* FOOTER - INTERNAL DIVS *****************/
+.panel-themed {
+	text-align: left;
+
+	.panel-heading {
+		background: $bookThemeColor;
+		color: #FFF;
+	}
+}
+
+/******************* FOOTER - INTERNAL DIVS *****************/
 #about-author {
 	float: left;
 	padding: 15px;

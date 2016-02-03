@@ -6,6 +6,6 @@ class Topic < ApplicationRecord
 
   accepts_nested_attributes_for :posts
 
-  validates :title, presence: true
+  # validates :title, presence: true
   # validates_associated :posts
 end
