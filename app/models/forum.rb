@@ -6,7 +6,7 @@ class Forum < ApplicationRecord
 	accepts_nested_attributes_for :posts
 
 	def most_recent_post
-	  topic = Topic.last
-	  return topic
+	  post = self.topics.last.posts.last
+	  return post
 	end
 end
