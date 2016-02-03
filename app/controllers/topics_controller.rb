@@ -11,12 +11,13 @@ class TopicsController < ApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
+    # @post = Post.new
   end
 
   # GET /topics/new
   def new
     @topic = Topic.new
-    # @topic.posts.build
+    @topic.posts.new
   end
 
   # GET /topics/1/edit
@@ -27,16 +28,15 @@ class TopicsController < ApplicationController
   # POST /topics
   # POST /topics.json
   def create
-
     @topic = @forum.topics.new topic_params
     @topic.last_poster_id = current_user.id
     @topic.user = current_user
-
-    # @topic.posts.first.user_id = current_user.id
+    @topic.posts.first.user_id = current_user.id
+    @topic.posts.first.topic = @topic
 
     respond_to do |format|
       if @topic.save
-        @forum.topics.last.posts.create(content:'Hard-coded Controller Test', forum_id: @forum.id, topic_id: @topic.id, user_id: current_user.id)
+        # @topic.posts.create(content: posts_attributes(:content), forum_id: @forum.id, topic_id: @topic.id, user_id: current_user.id)
 
         format.html { redirect_to forum_topic_path(@forum, @topic), notice: 'Topic was successfully created.' }
         format.json { render :show, status: :created, location: @topic }
