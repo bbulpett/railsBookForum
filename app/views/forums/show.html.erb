@@ -13,8 +13,8 @@
 <table class="table table-bordered table-striped">
   <tr>
     <th width="40%">Topics</th>
-    <th width="10%">Replies</th>
-    <th width="25%">Last Post</th>
+    <th width="5%" class="center">Posts</th>
+    <th width="30%" class="right">Last Post</th>
 <% if current_user && current_user.admin %>
     <th width="25%">Actions</th>
 <% end %>
@@ -22,8 +22,12 @@
   <% @forum.topics.each do |topic| %>
     <tr>
       <td><%= link_to (topic.title), [ @forum, topic ] %>
-      <td><%= topic.posts.count %></td>
-      <td class="right"></td>
+      <td class="center"><%= topic.posts.count %></td>
+      <% if topic.posts.any? %>
+        <td class="right"><%= topic.posts.last.updated_at.to_time.strftime("%D at %I:%M %p") %> by <strong><%= topic.posts.last.user.username %></strong></td>
+      <% else %>
+        <td class="right"><em>No posts yet</em></td>
+      <% end %>
       <% if current_user && current_user.admin %>
         <td><%= link_to [ @forum, topic ], class: "btn btn-xs btn-primary" do %>
               <i class="fa fa-eye"></i> <strong>SHOW</strong>
@@ -52,5 +56,5 @@
 <% end %>
 <!-- Back button -->
 <%= link_to forums_path, class: "btn btn-dark", style: "color: #FFF;" do %>
-    <i class="fa fa-backward"></i> <strong>Back</strong>
+    <i class="fa fa-backward"></i> <strong>Forums</strong>
 <% end %>
