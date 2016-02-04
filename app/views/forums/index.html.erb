@@ -24,7 +24,7 @@
         </td>
         <td class="right">
           <% if forum.most_recent_post %>
-            Posted at <%= forum.most_recent_post.created_at.to_time.strftime("%F at %r %Z") %><br>
+            Posted on <%= forum.most_recent_post.created_at.to_time.strftime("%D at %I:%M %p") %><br>
              by <strong><%= forum.most_recent_post.user.username %></strong>
           <% else %>
             No posts yet

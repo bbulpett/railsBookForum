@@ -133,6 +133,10 @@ td.right, th.right {
 	text-align: right;
 }
 
+td.center, th.center {
+	text-align: center;
+}
+
 /********************** NAVBAR ********************/
 .navbar {
 	background-color: transparent;
@@ -327,6 +331,7 @@ a.navbar-brand:visited {
 
 /********************* BUTTONS *******************/
 .btn {
+	color: #FFF !important;
 	padding: 3px 12px;
 	font-size: 14px;
 	font-weight: 600;
