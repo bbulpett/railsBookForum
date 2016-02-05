@@ -1,5 +1,5 @@
 # Change these
-server '162.243.81.219', port: 80, roles: [:web, :app, :db], primary: true
+server '162.243.81.219', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:bbulpett/railsBookForum.git'
 set :application,     'learningrails5'
