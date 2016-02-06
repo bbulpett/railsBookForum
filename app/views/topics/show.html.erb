@@ -3,12 +3,6 @@
 <div id="topicHeading">
   <h3 id="topicTitle"><span style="color: #ff54e8;">topic</span> <%= @topic.title %> <span style="color: #88f738;">< <em><%= @forum.name %></em></span></h3>
   <br>
-  <!-- Edit Topic button -->
-  <% if current_user && current_user.admin %>
-    <%= link_to edit_forum_topic_path(@forum, @topic), class: "btn btn-warning", style: "color: #FFF;" do %>
-      <i class="fa fa-edit"></i> <strong>Edit</strong>
-    <% end %>
-  <% end %>
   <table class="table table-bordered">
     <tr>
       <td>
