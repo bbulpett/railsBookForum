@@ -169,6 +169,7 @@ ul.nav.navbar-nav>li.pull-right>a {
 }
 
 a.navbar-brand {
+	font-family: TypewriterURW-Lig, 'Droid Serif', serif;
 	color: $bookThemeColor;
 }
 
@@ -182,7 +183,7 @@ a.navbar-brand:visited {
 	color: $bookThemeColor;
 }
 
-/******************* FOOTER - INTERNAL DIVS *****************/
+/******************* PANELS *****************/
 .panel-themed {
 	text-align: left;
 
@@ -237,96 +238,11 @@ a.navbar-brand:visited {
 	margin: 10px;
 }
 
-/******************* MEDIA QUERIES *********************/
-@media (min-width: 480px) {
-	.heading h1 {
-		font-size: 32px;
-	}
-	.share-button {
-		text-align: center;
-	}
-	ul.nav.navbar-nav>li.active a {
-		border: none;
-		text-decoration: underline;
-		background-color: transparent;
-	}
-	.navbar-collapse {
-		border-bottom: 1px solid #DDD;
-	}
 
-	#book-info {
-		clear: left;
-		float: none;
-	}
-	.navbar {
-		margin-top: 0;
-	}
-
-	#about-author {
-	width: 100%;
-	}
-}
-
-@media (min-width: 768px) {
-	.heading h1 {
-		font-size: 40px;
-	}
-
-	.navbar {
-		margin-top: 8px;
-	}
-
-	.navbar-brand {
-		display: none;
-	}
-
-	ul.nav.navbar-nav>li.active a {
-		background-color: transparent;
-		border-top: 8px solid #E7E7E7;
-		margin-top: -8px;
-		text-decoration: none;
-	}
-
-	/* centered navigation */
-	 .nav.navbar-nav {
-	     float: left;
-	 }
-	 .nav.navbar-nav {
-	     clear: left;
-	     float: left;
-	     margin: 0;
-	     padding: 0;
-	     position: relative;
-	     left: 50%;
-	     text-align: center;
-	 }
-	 .nav.navbar-nav > li {
-	     position: relative;
-	     right: 50%;
-	 }
-	 .nav.navbar-nav li {
-	    text-align: left
-	 }
-	 	#book-info {
-	 	clear: none;
-		float: right;
-	}
-
-	#about-author {
-	width: 60%;
-	}
-}
-
-@media (min-width: 992px) {
-	.heading h1 {
-		font-size: 56px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.heading h1 {
-		font-size: 68px;
-	}
+/********************* FORMS *******************/
+.title-field {
+	width: 75%;
+	margin: 0 auto;
 }
 
 /********************* BUTTONS *******************/
@@ -452,4 +368,155 @@ a.btn.btn-dark:hover {
 #flip {
 	color: lighten($bookThemeColor, 20%);
 	cursor: pointer;
+}
+
+/******************* MEDIA QUERIES *********************/
+@media (min-width: 480px) {
+	.heading h1 {
+		font-size: 32px;
+	}
+	.share-button {
+		text-align: center;
+	}
+	ul.nav.navbar-nav>li.active a {
+		border: none;
+		text-decoration: underline;
+		background-color: transparent;
+	}
+	.navbar-collapse {
+		border-bottom: 1px solid #DDD;
+	}
+
+	#book-info {
+		clear: left;
+		float: none;
+	}
+	.navbar {
+		margin-top: 0;
+	}
+
+	#about-author {
+	width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+	.heading h1 {
+		font-size: 40px;
+	}
+
+	.navbar {
+		margin-top: 8px;
+	}
+
+	.navbar-brand {
+		display: none;
+	}
+
+	ul.nav.navbar-nav>li.active a {
+		background-color: transparent;
+		border-top: 8px solid #E7E7E7;
+		margin-top: -8px;
+		text-decoration: none;
+	}
+
+	/* centered navigation */
+	 .nav.navbar-nav {
+	     float: left;
+	 }
+	 .nav.navbar-nav {
+	     clear: left;
+	     float: left;
+	     margin: 0;
+	     padding: 0;
+	     position: relative;
+	     left: 50%;
+	     text-align: center;
+	 }
+	 .nav.navbar-nav > li {
+	     position: relative;
+	     right: 50%;
+	 }
+	 .nav.navbar-nav li {
+	    text-align: left
+	 }
+	 	#book-info {
+	 	clear: none;
+		float: right;
+	}
+
+	#about-author {
+	width: 60%;
+	}
+}
+
+@media (min-width: 992px) {
+	.heading h1 {
+		font-size: 56px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.heading h1 {
+		font-size: 68px;
+	}
+}
+
+@media (max-width: 479px) {
+	.navbar-brand {
+		width: 120px;
+		padding: 5px 10px;
+	}
+
+	.heading {
+		display: none;
+	}
+
+	#flip {
+		font-size: 14pt;
+		text-align: center;
+	}
+
+	#content {
+		text-align: center;
+
+		.btn-xl {
+			margin-left: -25px;
+		}
+	}
+	footer {
+		position: relative;
+		text-align:center;
+		bottom: 0;
+
+		#about-author {
+			margin: 0 auto;
+
+			img {
+				width: 50px;
+				border: 1px solid #FFF;
+				border-radius: 50%;
+				float: left;
+			}
+		}
+
+		#about-author p, h3, #book-info {
+			display: none;
+		}		
+	}
+
+	h1, h2, p {
+		text-align: center;
+	}
+
+	#videoGallery ul{
+		position: relative;
+		padding: 0;
+		left: -76px;
+	}
+
+	#videoGallery li{
+		text-indent: 0px;
+		width: 85%;
+	}
 }
