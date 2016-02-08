@@ -62,7 +62,7 @@ h4 a{
 main {
 	min-height: 100%;
 	padding: 50px;
-	margin: 0 auto -340px;
+	margin: 0 auto;
 }
 
 .heading {
@@ -228,6 +228,7 @@ a.navbar-brand:visited {
 }
 
 #book-info {
+	display: none;
 	float: right;
 	border-left: 1px solid #FFF;
 	padding: 0 20px 50px;
@@ -380,7 +381,7 @@ a.btn.btn-dark:hover {
 }
 
 /******************* MEDIA QUERIES *********************/
-@media (min-width: 480px) {
+@media only screen and (min-width: 480px) {
 	.heading h1 {
 		font-size: 32px;
 	}
@@ -396,10 +397,6 @@ a.btn.btn-dark:hover {
 		border-bottom: 1px solid #DDD;
 	}
 
-	#book-info {
-		clear: left;
-		float: none;
-	}
 	.navbar {
 		margin-top: 0;
 	}
@@ -409,7 +406,7 @@ a.btn.btn-dark:hover {
 	}
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 	.heading h1 {
 		font-size: 40px;
 	}
@@ -420,6 +417,12 @@ a.btn.btn-dark:hover {
 
 	.navbar-brand {
 		display: none;
+	}
+
+	#book-info {
+		display: block;
+		clear: left;
+		float: none;
 	}
 
 	ul.nav.navbar-nav>li.active a {
@@ -459,22 +462,26 @@ a.btn.btn-dark:hover {
 	}
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
 	.heading h1 {
 		font-size: 56px;
 	}
 }
 
-@media (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
 	.heading h1 {
 		font-size: 68px;
 	}
 }
 
-@media (max-width: 479px) {
+@media only screen and (max-width: 479px) {
 	.navbar-brand {
 		width: 120px;
 		padding: 5px 10px;
+	}
+
+	.push {
+	height: 100px;
 	}
 
 	.heading {
@@ -488,15 +495,12 @@ a.btn.btn-dark:hover {
 
 	#content {
 		text-align: center;
-
-		.btn-xl {
-			margin-left: -25px;
-		}
 	}
+
 	footer {
-		position: relative;
 		text-align:center;
 		bottom: 0;
+		height: 100px;
 
 		#about-author {
 			margin: 0 auto;
@@ -514,6 +518,10 @@ a.btn.btn-dark:hover {
 		}		
 	}
 
+	.container {
+		max-height: inherit !important;
+	}
+
 	h1, h2, p {
 		text-align: center;
 	}
@@ -527,5 +535,39 @@ a.btn.btn-dark:hover {
 	#videoGallery li{
 		text-indent: 0px;
 		width: 85%;
+	}
+
+	main {
+		.btn {
+			font-size: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+
+	#about-author {
+		padding: 10px;
+		margin: 10px;
+
+		p {
+			font-size: 10pt;
+		}
+		img {
+			width: 180px;
+		}
+		.author-social {
+			float: right;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	#book-info {
+		padding: 10px;
+
+		ul {
+			width: 100%;
+		}
 	}
 }
