@@ -369,6 +369,45 @@ a.btn.btn-dark:hover {
 	font-weight: 400;
 }
 
+/********************* ALERTS *******************/
+#alert-area .alert {
+		color: #FFF;
+		margin: 0.15em 0; 
+		position: absolute;
+		width: 100%;
+		padding: 0.4em 1em;
+		font-weight: 700;
+		-webkit-animation: alertFades 2s linear 1s 1 forwards;
+		-moz-animation: alertFades 2s linear 1s 1 forwards;
+		-o-animation: alertFades 2s linear 1s 1 forwards;
+		animation: alertFades 2s linear 1s 1 forwards;
+}
+
+#alert-area .alert-success {
+	background: #060;
+}
+
+#alert-area .alert-danger {
+	background: #C00;
+}
+
+@-webkit-keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+@-mos-keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+@-o-keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+@keyframes alertFades{
+	0%	{opacity: 1;}
+	100%{opacity: 0;}
+}
+
 /********************* JQUERY ELEMENTS *******************/
 #panel {
 	padding: 25px 50px;
