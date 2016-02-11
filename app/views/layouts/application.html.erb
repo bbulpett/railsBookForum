@@ -13,6 +13,14 @@
   <body>
     <!-- render main navigation partial -->
     <%= render 'navigation' %>
+    <div id="alert-area">
+    <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+    </div>
     <main>
       <%= render 'heading' %>
       <br>
