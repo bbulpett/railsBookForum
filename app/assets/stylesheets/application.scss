@@ -192,6 +192,13 @@ a.navbar-brand:visited {
 	color: $bookThemeColor;
 }
 
+.navbar-nav li>a.beta::after {
+	color: #F00;
+	font-style: italic;
+	font-size: 8pt;
+	content: " * beta *";
+}
+
 /******************* PANELS *****************/
 .panel-themed {
 	text-align: left;
