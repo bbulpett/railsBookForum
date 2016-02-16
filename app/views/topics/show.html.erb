@@ -30,18 +30,29 @@
         <h3>Nothing to see here...</h3>
       </div>
     <% end %>
-</div>
-<!--Post listings for topic -->
 
-<!--End post listings for topic -->
-<!-- Edit Topic button -->
+
+<!--New Post Form -->
+  <div class="panel panel-default collapse in" id="newPostForm">
+    <h2>New Post Form</h2>
+  </div>
+<!-- end new post form -->
+
+
+</div>
 <br>
-<% if current_user && current_user.admin %>
-  <%= link_to edit_forum_topic_path(@forum, @topic), class: "btn btn-warning", style: "color: #FFF;" do %>
-    <i class="fa fa-edit"></i> <strong>Edit</strong>
+<div id="centered-controls">
+  <%= link_to forum_path(@forum), class: "btn btn-dark", style: "color: #FFF;" do %>
+      <i class="fa fa-backward"></i> <strong>Topics</strong>
   <% end %>
-<% end %>
-<!-- Back button -->
-<%= link_to forum_path(@forum), class: "btn btn-dark", style: "color: #FFF;" do %>
-    <i class="fa fa-backward"></i> <strong>Topics</strong>
-<% end %>
+  <% if current_user %>
+    <% if current_user.admin %>
+      <%= link_to edit_forum_topic_path(@forum, @topic), class: "btn btn-warning", style: "color: #FFF;" do %>
+        <i class="fa fa-edit"></i> <strong>Edit</strong>
+      <% end %>
+    <% end %>
+    <%= link_to "#newPostForm", class: "btn btn-info", "data-toggle": "collapse" do %>
+      <strong>Post a Response </strong><i class="fa fa-forward"></i>
+    <% end %>
+  <% end %>
+</div>

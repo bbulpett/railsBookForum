@@ -90,6 +90,51 @@ footer {
 	width: 100%;
 	color: #fff;
 	height: 340px;
+
+	#about-author {
+		float: left;
+		padding: 15px;
+		margin: 15px;
+	}
+
+	#about-author a {
+		color: #FFF;
+		text-decoration: underline;
+		font-weight: 600;
+	}
+
+	#about-author p {
+		font-size: 16px;
+	}
+
+	#about-author img {
+		width: 250px;
+		border: 2px solid #FFF;
+		border-radius: 50%;
+		float: left;
+		margin: 15px;
+	}
+
+	#book-info {
+		display: none;
+		float: right;
+		border-left: 1px solid #FFF;
+		padding: 0 20px 50px;
+		width: 30%;
+		margin: 50px 15px;
+	}
+
+	#book-info h3 {
+		margin: 0;
+	}
+
+	#book-info ul {
+		list-style-type: none;
+	}
+
+	.author-social i{
+		margin: 10px;
+	}
 }
 
 .push {
@@ -208,53 +253,6 @@ a.navbar-brand:visited {
 		color: #FFF;
 	}
 }
-
-/******************* FOOTER - INTERNAL DIVS *****************/
-#about-author {
-	float: left;
-	padding: 15px;
-	margin: 15px;
-}
-
-#about-author a {
-	color: #FFF;
-	text-decoration: underline;
-	font-weight: 600;
-}
-
-#about-author p {
-	font-size: 16px;
-}
-
-#about-author img {
-	width: 250px;
-	border: 2px solid #FFF;
-	border-radius: 50%;
-	float: left;
-	margin: 15px;
-}
-
-#book-info {
-	display: none;
-	float: right;
-	border-left: 1px solid #FFF;
-	padding: 0 20px 50px;
-	width: 30%;
-	margin: 50px 15px;
-}
-
-#book-info h3 {
-	margin: 0;
-}
-
-#book-info ul {
-	list-style-type: none;
-}
-
-.author-social i{
-	margin: 10px;
-}
-
 
 /********************* FORMS *******************/
 .title-field {
@@ -375,6 +373,12 @@ a.btn.btn-dark:hover {
 	font-size: 6pt;
 	font-weight: 400;
 }
+
+#centered-controls {
+	text-align: center;
+	display: block;
+}
+
 
 /********************* ALERTS *******************/
 #alert-area .alert {
