@@ -397,6 +397,12 @@ a.btn.btn-dark:hover {
 #centered-controls {
 	text-align: center;
 	display: block;
+
+	#loginLinks {
+		color: $bookThemeColor;
+		font-style: italic;
+		font-size: 120%;
+	}
 }
 
 
