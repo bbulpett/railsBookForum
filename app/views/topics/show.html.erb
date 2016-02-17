@@ -30,15 +30,16 @@
         <h3>Nothing to see here...</h3>
       </div>
     <% end %>
-
-
 <!--New Post Form -->
-  <div class="panel panel-default collapse in" id="newPostForm">
-    <h2>New Post Form</h2>
+  <div class="panel panel-default panel-themed collapse" id="newPostForm">
+    <div class="panel-heading">New Post</div>
+    <%= form_for :topic do |f| %>
+      <%= fields_for :post do |p| %>
+        <%= p.cktext_area :content, class: 'ckeditor' %>
+      <% end %>
+    <% end %>
   </div>
 <!-- end new post form -->
-
-
 </div>
 <br>
 <div id="centered-controls">
@@ -50,9 +51,16 @@
       <%= link_to edit_forum_topic_path(@forum, @topic), class: "btn btn-warning", style: "color: #FFF;" do %>
         <i class="fa fa-edit"></i> <strong>Edit</strong>
       <% end %>
-    <% end %>
-    <%= link_to "#newPostForm", class: "btn btn-info", "data-toggle": "collapse" do %>
-      <strong>Post a Response </strong><i class="fa fa-forward"></i>
+  <% end %>
+
+  <%= link_to "#newPostForm", class: "btn btn-info", "data-toggle": "collapse", onclick: "hide();showNewPostButtons()", id: "beginNewPostButton" do %>
+    <strong>Post a Response </strong><i class="fa fa-forward"></i>
+  <% end %>
+  <%= link_to "#newPostForm", class: "editing-buttons-hidden btn btn-danger", id: "newPostButton" do %>
+    <i class="fa fa-bomb"></i><strong> Cancel</strong>
+  <% end %>
+    <%= link_to "#newPostForm", class: "editing-buttons-hidden btn btn-success", id: "newPostButton" do %>
+      <i class="fa fa-check"></i><strong> Submit Post</strong>
     <% end %>
   <% end %>
 </div>

@@ -42,19 +42,21 @@
     </tr>
   <% end %>
 </table>
+<div id="centered-controls">
 <!-- New Topic button -->
   <% if current_user %> 
-  <%= link_to new_forum_topic_path(@forum), class: "btn btn-primary", style: "color: #FFF;" do %>
-      <i class="fa fa-plus"></i> <strong>New Topic</strong>
+    <%= link_to new_forum_topic_path(@forum), class: "btn btn-primary", style: "color: #FFF;" do %>
+        <i class="fa fa-plus"></i> <strong>New Topic</strong>
+    <% end %>
   <% end %>
-<% end %>
-<!-- Edit Forum button -->
-<% if current_user && current_user.admin %>
-	<%= link_to edit_forum_path(@forum), class: "btn btn-warning", style: "color: #FFF;" do %>
-    <i class="fa fa-edit"></i> <strong>Edit</strong>
-	<% end %>
-<% end %>
-<!-- Back button -->
-<%= link_to forums_path, class: "btn btn-dark", style: "color: #FFF;" do %>
-    <i class="fa fa-backward"></i> <strong>Forums</strong>
-<% end %>
+  <!-- Edit Forum button -->
+  <% if current_user && current_user.admin %>
+  	<%= link_to edit_forum_path(@forum), class: "btn btn-warning", style: "color: #FFF;" do %>
+      <i class="fa fa-edit"></i> <strong>Edit</strong>
+  	<% end %>
+  <% end %>
+  <!-- Back button -->
+  <%= link_to forums_path, class: "btn btn-dark", style: "color: #FFF;" do %>
+      <i class="fa fa-backward"></i> <strong>Forums</strong>
+  <% end %>
+</div>
