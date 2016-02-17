@@ -50,17 +50,21 @@
     <% if current_user.admin %>
       <%= link_to edit_forum_topic_path(@forum, @topic), class: "btn btn-warning", style: "color: #FFF;" do %>
         <i class="fa fa-edit"></i> <strong>Edit</strong>
+          <% end %>
       <% end %>
-  <% end %>
-
-  <%= link_to "#newPostForm", class: "btn btn-info", "data-toggle": "collapse", "data-no-turbolink":true, onclick: "showNewPostButtons()", id: "beginNewPostButton" do %>
-    <strong>Post a Response </strong><i class="fa fa-forward"></i>
-  <% end %>
-  <%= link_to "#newPostForm", class: "editing-buttons-hidden btn btn-danger", id: "newPostButton" do %>
-    <i class="fa fa-bomb"></i><strong> Cancel</strong>
-  <% end %>
-    <%= link_to "#newPostForm", class: "editing-buttons-hidden btn btn-success", id: "newPostButton" do %>
-      <i class="fa fa-check"></i><strong> Submit Post</strong>
-    <% end %>
+      <%= link_to "#newPostForm", class: "btn btn-info", "data-toggle": "collapse", "data-no-turbolink":true, onclick: "showNewPostButtons()", id: "beginNewPostButton" do %>
+        <strong>Post a Response </strong><i class="fa fa-forward"></i>
+      <% end %>
+      <%= link_to "#newPostForm", class: "editing-buttons-hidden btn btn-danger", id: "newPostButton" do %>
+        <i class="fa fa-bomb"></i><strong> Cancel</strong>
+      <% end %>
+      <%= link_to "#newPostForm", class: "editing-buttons-hidden btn btn-success", id: "newPostButton" do %>
+        <i class="fa fa-check"></i><strong> Submit Post</strong>
+      <% end %>
+  <% else %>
+    <strong><%= link_to "Sign Up", new_user_path, id: "loginLinks" %>
+    or
+    <%= link_to "Log In", new_session_path, id: "loginLinks" %>
+    to repond</strong>
   <% end %>
 </div>
