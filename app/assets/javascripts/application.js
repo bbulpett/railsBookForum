@@ -22,3 +22,22 @@ $(document).on('page:change', function(){
 		$(this).next('#panel').slideToggle('fast');
 	});
 });
+
+$(document).ready(function(){ 
+		$('[id=beginNewPostButton]').click(function(){ 
+		$(this).hide();
+		$('[id=newPostButton]').removeClass('editing-buttons-hidden'); 
+		$('[id=newPostButton]').addClass('editing-buttons-shown'); 
+	}); 
+}); 
+// var button = document.getElementById("button");
+// var d3 = document.getElementById("d3");
+// function showMore() {
+//     button.style.display="none";
+//     d3.style.display="block";
+// }
+
+// function showLess() {
+//     button.style.display="inline-block";
+//     d3.style.display="none";
+// }

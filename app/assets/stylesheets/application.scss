@@ -31,17 +31,16 @@ $bookThemeColor: #B63E97;
 	-webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.003);
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 
 html {
 	position: relative;
 	min-height: 100%;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.002);
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-o-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-	overflow-x: hidden;
 }
 
 body {
@@ -260,6 +259,12 @@ a.navbar-brand:visited {
 	margin: 0 auto;
 }
 
+#newPostForm {
+	margin-top: -20px;
+	font-weight: 800;
+	text-align: center
+}
+
 /********************* BUTTONS *******************/
 .btn {
 	color: #FFF !important;
@@ -350,6 +355,11 @@ a.btn.btn-dark:hover {
 	box-shadow: 2px 2px 2px #999;
 }
 
+.btn-info {
+	border: none;
+	box-shadow: 2px 2px 2px #069;
+}
+
 .btn-danger {
 	box-shadow: 2px 2px 2px #400;
 }
@@ -372,6 +382,14 @@ a.btn.btn-dark:hover {
 	margin: 2px;
 	font-size: 6pt;
 	font-weight: 400;
+}
+
+.editing-buttons-hidden {
+	display: none;
+}
+
+.editing-buttons-shown {
+	display: inline;
 }
 
 #centered-controls {
