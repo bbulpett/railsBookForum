@@ -33,7 +33,7 @@
 <!--New Post Form -->
   <div class="panel panel-default panel-themed collapse" id="newPostForm">
     <div class="panel-heading">New Post</div>
-    <%= form_for :topic do |f| %>
+    <%= form_for :topic, html: { id: "newPost" } do |f| %>
       <%= fields_for :post do |p| %>
         <%= p.cktext_area :content, class: 'ckeditor' %>
       <% end %>
@@ -55,10 +55,10 @@
       <%= link_to "#newPostForm", class: "btn btn-info", "data-toggle": "collapse", id: "beginNewPostButton" do %>
         <strong>Post a Response </strong><i class="fa fa-forward"></i>
       <% end %>
-      <%= link_to "#newPostForm", class: "editing-buttons-hidden btn btn-danger", id: "newPostButton" do %>
+      <%= link_to "#newPostForm", class: "editing-buttons-hidden btn btn-danger", "data-toggle": "collapse", id: "newPostButton" do %>
         <i class="fa fa-bomb"></i><strong> Cancel</strong>
       <% end %>
-      <%= link_to "#newPostForm", class: "editing-buttons-hidden btn btn-success", id: "newPostButton" do %>
+      <%= link_to "#", onclick: "$('#newPost').submit()", class: "editing-buttons-hidden btn btn-success", id: "newPostButton", form: "postForm" do %>
         <i class="fa fa-check"></i><strong> Submit Post</strong>
       <% end %>
   <% else %>

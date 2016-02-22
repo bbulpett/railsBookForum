@@ -25,7 +25,15 @@ $(document).on('page:change', function(){
 
 	$('[id=beginNewPostButton]').click(function(){ 
 		$(this).hide();
+
 		$('[id=newPostButton]').removeClass('editing-buttons-hidden'); 
 		$('[id=newPostButton]').addClass('editing-buttons-shown'); 
+	});
+
+	$('[id=newPostButton]').click(function(){ 
+		$('[id=newPostButton]').addClass('editing-buttons-hidden'); 
+		$('[id=newPostButton]').removeClass('editing-buttons-shown'); 
+
+		$('[id=beginNewPostButton').show();
 	});
 });
