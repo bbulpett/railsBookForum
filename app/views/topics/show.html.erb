@@ -23,7 +23,7 @@
           <div class="panel-heading"><%= post.created_at.to_time.strftime("%D at %I:%M %p") %> by <strong><%= post.user.username %></strong></div>
           <div class="panel-body"><%= sanitize post.content %></div>
         </div>
-    <% end %>
+      <% end %>
     <% else %>
       <br>
       <div class="jumbotron">
@@ -33,10 +33,9 @@
 <!--New Post Form -->
   <div class="panel panel-default panel-themed collapse" id="newPostForm">
     <div class="panel-heading">New Post</div>
-    <%= form_for :topic, html: { id: "newPost" } do |f| %>
-      <%= fields_for :post do |p| %>
-        <%= p.cktext_area :content, class: 'ckeditor' %>
-      <% end %>
+    <%= form_tag(controller: "topics", action: "create_post", method: "post") do%>
+      <%= cktext_area_tag(:content, class: 'ckeditor') %>
+      <%= submit_tag("Submit Post") %>
     <% end %>
   </div>
 <!-- end new post form -->
@@ -58,7 +57,7 @@
       <%= link_to "#newPostForm", class: "editing-buttons-hidden btn btn-danger", "data-toggle": "collapse", id: "newPostButton" do %>
         <i class="fa fa-bomb"></i><strong> Cancel</strong>
       <% end %>
-      <%= link_to "#", onclick: "$('#newPost').submit()", class: "editing-buttons-hidden btn btn-success", id: "newPostButton", form: "postForm" do %>
+      <%= link_to "", onclick: "$('#newPost').submit()", class: "editing-buttons-hidden btn btn-success", id: "newPostButton", form: "postForm" do %>
         <i class="fa fa-check"></i><strong> Submit Post</strong>
       <% end %>
   <% else %>
