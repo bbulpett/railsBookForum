@@ -2,9 +2,6 @@ Rails.application.routes.draw do
 
   resources :forums do
     resources :topics do
-      member do
-        post 'create_post'
-      end
       resources :posts
     end
   end

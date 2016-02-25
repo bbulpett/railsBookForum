@@ -11,7 +11,7 @@ class TopicsController < ApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
-    # @post = Post.new
+    @post = Post.new
   end
 
   # GET /topics/new
@@ -71,20 +71,20 @@ class TopicsController < ApplicationController
     end
   end
 
-  def create_post
-    @topic = Topic.find(params[:id])
-    @post = @topic.posts.build(params[:post])
-    respond_to do |format|
-      if @post.save
-        @post = Post.new
-        format.html { redirect_to forum_topic_path(@forum, @topic), notice: 'Your response has been posted.' }
-        format.json { render :show, status: :ok, location: @topic }
-      else
-        format.html { render :show, alert: "ERROR: Post not saved!" }
-        format.json { render json: @topic.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def create_post
+  #   @topic = Topic.find(params[:id])
+  #   @post = @topic.posts.build(params[:post])
+  #   respond_to do |format|
+  #     if @post.save
+  #       @post = Post.new
+  #       format.html { redirect_to forum_topic_path(@forum, @topic), notice: 'Your response has been posted.' }
+  #       format.json { render :show, status: :ok, location: @topic }
+  #     else
+  #       format.html { render :show, alert: "ERROR: Post not saved!" }
+  #       format.json { render json: @topic.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

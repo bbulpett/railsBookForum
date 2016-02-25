@@ -14,6 +14,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    @topic = Topic.find(params[:topic_id])
     @post = @topic.posts.new
   end
 
