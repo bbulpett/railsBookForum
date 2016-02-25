@@ -30,15 +30,14 @@
         <h3>Nothing to see here...</h3>
       </div>
     <% end %>
+
 <!--New Post Form -->
   <div class="panel panel-default panel-themed collapse" id="newPostForm">
-    <div class="panel-heading">New Post</div>
-    <%= form_tag(controller: "topics", action: "create_post", method: "post") do%>
-      <%= cktext_area_tag(:content, class: 'ckeditor') %>
-      <%= submit_tag("Submit Post") %>
-    <% end %>
-  </div>
+      <div class="panel-heading">New Post</div>
+      <% render partial: "posts/form", locals: {forum_id: @forum, topic_id: @topic} %>
+  </div>  
 <!-- end new post form -->
+
 </div>
 <br>
 <div id="centered-controls">
@@ -51,13 +50,17 @@
         <i class="fa fa-edit"></i> <strong>Edit</strong>
           <% end %>
       <% end %>
+
+      <!-- Link to New Post Form -->
       <%= link_to "#newPostForm", class: "btn btn-info", "data-toggle": "collapse", id: "beginNewPostButton" do %>
         <strong>Post a Response </strong><i class="fa fa-forward"></i>
       <% end %>
+      <!-- end link to new post form -->
+      
       <%= link_to "#newPostForm", class: "editing-buttons-hidden btn btn-danger", "data-toggle": "collapse", id: "newPostButton" do %>
         <i class="fa fa-bomb"></i><strong> Cancel</strong>
       <% end %>
-      <%= link_to "", onclick: "$('#newPost').submit()", class: "editing-buttons-hidden btn btn-success", id: "newPostButton", form: "postForm" do %>
+      <%= link_to "", onclick: "$('#newPost').submit()", class: "editing-buttons-hidden btn btn-success", id: "newPostButton", form: "newPostForm" do %>
         <i class="fa fa-check"></i><strong> Submit Post</strong>
       <% end %>
   <% else %>
