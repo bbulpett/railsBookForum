@@ -26,10 +26,12 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    @topic = Topic.find(params[:topic_id])
+    @forum = Forum.find(params[:forum_id])
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @topic, notice: 'Post was successfully created.' }
+        format.html { redirect_to forum_topic_path( @forum, @topic ), notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
