@@ -6,8 +6,7 @@ Rails.application.routes.draw do
     end
   end
   # get 'sessions/new'
-  resources :sessions
-  resources :users
+  resources :sessions, :users
 
   get 'static/home'
   get 'screencasts' => 'static#media'
