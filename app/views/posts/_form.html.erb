@@ -1,4 +1,4 @@
-<%= form_for([@forum, @topic, @post]) do |f| %>
+<%= form_for([@forum, @topic, @post], html: {id: "newPost"}) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -17,8 +17,5 @@
     <%= f.hidden_field :topic_id, value: @topic.id %>
     <%= f.cktext_area :content, class: 'ckeditor' %>
   </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
 <% end %>
