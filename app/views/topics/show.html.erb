@@ -34,7 +34,9 @@
 <!--New Post Form -->
   <div class="panel panel-default panel-themed collapse" id="newPostForm">
       <div class="panel-heading">New Post</div>
-      <%= render partial: "posts/form" %>
+      <% if current_user %>
+          <%= render partial: "posts/form" %>
+      <% end %>
   </div>  
 <!-- end new post form -->
 
