@@ -15,7 +15,7 @@
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :forum_id, value: @forum.id %>
     <%= f.hidden_field :topic_id, value: @topic.id %>
-    <%= f.cktext_area :content, class: 'ckeditor' %>
+    <%= f.cktext_area :content, ckeditor: { toolbar: 'mini'} %>
   </div>
   
 <% end %>

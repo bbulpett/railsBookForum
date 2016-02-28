@@ -18,7 +18,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).on('page:change', function(){
+$(document).on('page:load page:change', function(){
 	$('[id=flip]').click(function(){
 		$(this).next('#panel').slideToggle('fast');
 	});
