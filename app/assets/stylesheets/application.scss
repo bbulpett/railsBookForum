@@ -69,7 +69,7 @@ h4 a{
 
 /******************** PRIMARY DIVS ******************/
 main {
-	min-height: 100%;
+	min-height: 100% !important;
 	padding: 50px;
 	margin: 0 auto;
 }
@@ -98,12 +98,13 @@ footer {
 	bottom: 0;
 	width: 100%;
 	color: #fff;
-	height: 340px;
+	height: 300px;
 
 	#about-author {
+		width: 60%;
 		float: left;
 		padding: 15px;
-		margin: 15px;
+		margin: 0 15px;
 	}
 
 	#about-author a {
@@ -117,7 +118,7 @@ footer {
 	}
 
 	#about-author img {
-		width: 250px;
+		width: 30%;
 		border: 2px solid #FFF;
 		border-radius: 50%;
 		float: left;
@@ -125,12 +126,12 @@ footer {
 	}
 
 	#book-info {
-		display: none;
 		float: right;
 		border-left: 1px solid #FFF;
 		padding: 0 20px 50px;
 		width: 30%;
-		margin: 50px 15px;
+		height: 210px;
+		margin: 50px 15px 0;
 	}
 
 	#book-info h3 {
@@ -141,13 +142,17 @@ footer {
 		list-style-type: none;
 	}
 
-	.author-social i{
-		margin: 10px;
+	.author-social {
+		float: right;
+
+		i {
+			margin: 10px;
+		}
 	}
 }
 
 .push {
-	height: 340px;
+	height: 350px;
 }
 
 #registration-form {
@@ -178,22 +183,17 @@ footer {
 }
 
 #videoGallery {
-	margin: 0 auto;
-	
-	ul {
-		text-align: center;
-		padding-left: 30px;
-	}
+	margin: 0 auto 100px;
+	display: block;
+	position: relative;
+}
 
-	li.list-group-item {
-		display: inline-block;
-		width: 320px; 
-		height: 220px;
-		border: none;
-		background: #CCC;
-		margin: 15px;
-		padding: 0;
-	}
+.videoBox {
+	margin: 10px;
+	padding: 0;
+	width: 320px;
+	height: 220px;
+	border: 1px solid #DDD;
 }
 
 td.right, th.right {
@@ -488,10 +488,6 @@ a.btn.btn-dark:hover {
 	.navbar {
 		margin-top: 0;
 	}
-
-	#about-author {
-	width: 100%;
-	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -507,11 +503,11 @@ a.btn.btn-dark:hover {
 		display: none;
 	}
 
-	#book-info {
-		display: block;
-		clear: left;
-		float: none;
-	}
+	// #book-info {
+	// 	display: block;
+	// 	clear: left;
+	// 	float: none;
+	// }
 
 	ul.nav.navbar-nav>li.active a {
 		background-color: transparent;
@@ -540,14 +536,14 @@ a.btn.btn-dark:hover {
 	 .nav.navbar-nav li {
 	    text-align: left
 	 }
-	 	#book-info {
-	 	clear: none;
-		float: right;
-	}
+	//  	#book-info {
+	//  	clear: none;
+	// 	float: right;
+	// }
 
-	#about-author {
-	width: 60%;
-	}
+	// #about-author {
+	// width: 80%;
+	// }
 }
 
 @media only screen and (min-width: 992px) {
@@ -562,7 +558,7 @@ a.btn.btn-dark:hover {
 	}
 }
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 768px) {
 	.navbar-brand {
 		width: 120px;
 		padding: 5px 10px;
@@ -585,44 +581,37 @@ a.btn.btn-dark:hover {
 		text-align: center;
 	}
 
-	footer {
-		text-align:center;
-		bottom: 0;
-		height: 100px;
-
-		#about-author {
-			margin: 0 auto;
-
-			img {
-				width: 50px;
-				border: 1px solid #FFF;
-				border-radius: 50%;
-				float: left;
-			}
-		}
-
-		#about-author p, h3, #book-info {
-			display: none;
-		}		
+	#about-author p, h3 {
+		text-align: right;
 	}
+	// footer {
+	// 	text-align:center;
+	// 	bottom: 0;
+	// 	height: 120px;
+
+	// #about-author {
+	// 	width: 80%;
+
+	// 		img {
+	// 			width: 50px;
+	// 			border: 1px solid #FFF;
+	// 			border-radius: 50%;
+	// 			float: left;
+	// 		}
+	// 	}
+
+	// 	#about-author p, h3, #book-info {
+	// 		display: none;
+	// 	}		
+	// }
 
 	.container {
-		max-height: inherit !important;
+		max-height: 300px !important;
+		overflow-y: hidden;
 	}
 
 	h1, h2, p {
 		text-align: center;
-	}
-
-	#videoGallery ul{
-		position: relative;
-		padding: 0;
-		left: -76px;
-	}
-
-	#videoGallery li{
-		text-indent: 0px;
-		width: 85%;
 	}
 
 	main {
@@ -635,27 +624,46 @@ a.btn.btn-dark:hover {
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
 
 	#about-author {
-		padding: 10px;
-		margin: 10px;
 
-		p {
-			font-size: 10pt;
-		}
 		img {
-			width: 180px;
+			width: 20%;
 		}
-		.author-social {
-			float: right;
-			margin: 0;
-			padding: 0;
-		}
+	}
+	// #about-author {
+	// 	padding: 10px;
+	// 	margin: 10px;
+	// 	width: 80%;
+
+	// 	p {
+	// 		font-size: 10pt;
+	// 	}
+	// 	img {
+	// 		width: 180px;
+	// 	}
+	// 	.author-social {
+	// 		float: right;
+	// 		margin: 0;
+	// 		padding: 0;
+	// 	}
+	// }
+
+	// #book-info {
+	// 	display: none;
+	// 	padding: 10px;
+
+	// 	ul {
+	// 		width: 100%;
+	// 	}
+	// }
+}
+
+@media only screen and (max-width: 768px) {
+	#about-author {
+		float: none;
+		width: 100%;
 	}
 
 	#book-info {
-		padding: 10px;
-
-		ul {
-			width: 100%;
-		}
+		display: none;
 	}
 }
