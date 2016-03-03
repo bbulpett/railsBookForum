@@ -265,6 +265,10 @@ a.navbar-brand:visited {
 		background: $bookThemeColor;
 		color: #FFF;
 	}
+
+	.panel-body p {
+		text-align: left !important;
+	}
 }
 
 /********************* FORMS *******************/
@@ -417,6 +421,12 @@ a.btn.btn-dark:hover {
 	}
 }
 
+#delete-post {
+	position: relative;
+	right: 0;
+	background: #F00;
+	color: #FFF;
+}
 
 /********************* ALERTS *******************/
 #alert-area .alert {

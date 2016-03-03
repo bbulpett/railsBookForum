@@ -22,8 +22,8 @@
         <div class="panel panel-default panel-themed">
           <div class="panel-heading">
             <%= post.created_at.to_time.strftime("%D at %I:%M %p") %> by <strong><%= post.user.username %></strong>
-            <% if current_user.admin %>
-              <%= link_to 'Delete Post', forum_topic_post_path(topic_id: @topic, post_id: @topic.post.id), method: :delete, data: { confirm: 'You want this post destroyed?' } %>
+            <% if current_user && current_user.admin %>
+              <%= link_to 'Delete Post', class: "btn btn-danger", method: :delete, data: { confirm: 'You want this post destroyed?' } %>
             <% end %>
           </div>
           <div class="panel-body"><%= sanitize post.content %></div>
