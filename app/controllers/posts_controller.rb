@@ -58,8 +58,11 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
     @post.destroy
+    @topic = Topic.find(params[:topic_id])
+    @forum = Forum.find(params[:forum_id])
+    
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to forum_topic_path( @forum, @topic ), notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

@@ -3,38 +3,41 @@
 <div id="topicHeading">
   <h3 id="topicTitle"><span style="color: #ff54e8;">topic</span> <%= @topic.title %> <span style="color: #88f738;">< <em><%= @forum.name %></em></span></h3>
   <br>
-  <table class="table table-bordered">
-    <tr>
-      <td>
-        <strong>Last post by </strong>
-        <em><%= @topic.posts.last.user.username %></em>
-        on <%= @topic.posts.last.updated_at.to_time.strftime("%D at %I:%M %p") %>
-      </td>
-      <td>
-        <strong>Started by:</strong>
-         <em><%= @topic.posts.first.user.username %></em>
-         on <%= @topic.created_at.to_time.strftime("%D at %I:%M %p") %>
-      </td>
-    </tr>
-  </table>
-    <% if @topic.posts.any? %>
-      <% @topic.posts.each do |post| %>
-        <div class="panel panel-default panel-themed">
-          <div class="panel-heading">
-            <%= post.created_at.to_time.strftime("%D at %I:%M %p") %> by <strong><%= post.user.username %></strong>
-            <% if current_user && current_user.admin %>
-              <%= link_to 'Delete Post', class: "btn btn-danger", method: :delete, data: { confirm: 'You want this post destroyed?' } %>
-            <% end %>
-          </div>
-          <div class="panel-body"><%= sanitize post.content %></div>
-        </div>
-      <% end %>
-    <% else %>
-      <br>
-      <div class="jumbotron">
-        <h3>Nothing to see here...</h3>
+</div>
+
+<table class="table table-bordered">
+  <tr>
+    <td>
+      <strong>Last post by </strong>
+      <em><%= @topic.posts.last.user.username %></em>
+      on <%= @topic.posts.last.updated_at.to_time.strftime("%D at %I:%M %p") %>
+    </td>
+    <td>
+      <strong>Started by:</strong>
+       <em><%= @topic.posts.first.user.username %></em>
+       on <%= @topic.created_at.to_time.strftime("%D at %I:%M %p") %>
+    </td>
+  </tr>
+</table>
+
+<% if @topic.posts.any? %>
+  <% @topic.posts.each do |post| %>
+    <div class="panel panel-default panel-themed">
+      <div class="panel-heading">
+        <%= post.created_at.to_time.strftime("%D at %I:%M %p") %> by <strong><%= post.user.username %></strong>
+        <% if current_user && current_user.admin %>
+          <%= button_to "Delete Post", forum_topic_post_path(@forum, @topic, post), method: :delete, id: "delete-post", data: { confirm: "Are you sure?" } %>
+        <% end %>
       </div>
-    <% end %>
+      <div class="panel-body"><%= sanitize post.content %></div>
+    </div>
+  <% end %>
+<% else %>
+  <br>
+  <div class="jumbotron">
+    <h3>Nothing to see here...</h3>
+  </div>
+<% end %>
 
 <!--New Post Form -->
   <div class="panel panel-default panel-themed collapse" id="newPostForm">

@@ -22,9 +22,7 @@ $(document).on('page:change', function(){
 	$('[id=flip]').click(function(){
 		$(this).next('#panel').slideToggle('fast');
 	});
-});
 
-$(document).on('page:load page:change', function(){
 	$('[id=beginNewPostButton]').click(function(){ 
 		$(this).hide();
 
@@ -39,4 +37,3 @@ $(document).on('page:load page:change', function(){
 		$('[id=beginNewPostButton').show();
 	});
 });
-
