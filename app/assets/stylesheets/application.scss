@@ -210,14 +210,8 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	  margin-right: auto;
 	}
 
-	#videoGallery {
-		margin: 0 auto 100px;
-		display: block;
-		position: relative;
-	}
-
 	.videoBox {
-		margin: 10px;
+		margin: 15px 6px;
 		padding: 0;
 		width: 320px;
 		height: 220px;
@@ -300,10 +294,12 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	}
 
 	.container {
-		margin: 0 auto;
-		
 		.row {
 			text-align: center;
+		}
+
+		.col-centered {
+			margin: 0 auto;
 		}
 	}
 
