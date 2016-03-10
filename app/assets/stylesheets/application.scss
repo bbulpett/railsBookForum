@@ -299,6 +299,14 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		}
 	}
 
+	.container {
+		margin: 0 auto;
+		
+		.row {
+			text-align: center;
+		}
+	}
+
 	/********************* FORMS *******************/
 	.title-field {
 		width: 75%;
