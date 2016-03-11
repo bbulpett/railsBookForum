@@ -19,3 +19,5 @@
 # Ignore database configs
 /config/database.yml
 db/*.sqlite3
+/config/local_env.yml
+/config/secrets.yml
