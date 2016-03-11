@@ -1,4 +1,4 @@
-<div id="registration-form">
+<div id="registration-form" class="panel panel-default">
   <h1>Sign Up</h1>
   <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
@@ -28,7 +28,9 @@
       <%= f.label :password_confirmation %><br>
       <%= f.password_field :password_confirmation, required: true %>
     </div>
-    <br>
-    <div class="actions"><%= f.submit "Sign Up"%></div>
+    <br><%= recaptcha_tags %><br>
+    <%= link_to new_user_path, class: "btn btn-l btn-success" do %>
+      <i class="fa fa-hand-o-right"></i> <strong>Sign Up</strong>
+    <% end %>
   <% end %>
 </div>
