@@ -26,6 +26,8 @@ gem 'puma'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# ReCAPTCHA plugin adds helpers for the reCAPTCHA API
+gem "recaptcha", require: "recaptcha/rails"
 
 # Kaminari gem does pagination and stuff
 gem 'kaminari', '0.16.3'
