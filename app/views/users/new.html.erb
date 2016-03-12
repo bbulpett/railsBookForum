@@ -14,19 +14,20 @@
 
     <div class="field">
       <%= f.label :email %><br>
-      <%= f.email_field :email, required: true %>
+      <%= f.email_field :email, required: true, autofocus: true, placeholder: "Enter a valid email" %>
     </div>
     <div class="field">
       <%= f.label :username, 'Username' %><br>
-      <%= f.text_field :username, required: true %>
+      <%= f.text_field :username, required: true, placeholder: "Pick a username" %>
     </div>
     <div class="field">
       <%= f.label :password %><br>
-      <%= f.password_field :password, required: true %>
+      <%= f.password_field :password, required: true, placeholder: "Create a password" %>
+      <p id="form-tip">Passwords must be at least <strong>8 characters</strong> in length and contain at least <strong>one upper case letter</strong>, <strong>one lower case letter</strong>, and <strong>one number or special character</strong>.</p>
     </div>
     <div class="field">
       <%= f.label :password_confirmation %><br>
-      <%= f.password_field :password_confirmation, required: true %>
+      <%= f.password_field :password_confirmation, required: true, placeholder: "Password again" %>
     </div>
     <br><%= recaptcha_tags ajax: true%><br>
 
