@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if verify_recaptcha(model: @user, timeout: 30, message: "Problem with ReCAPTCHA, please try again.") && @user.save
+        session[:user_id] = @user.id
         format.html { redirect_to root_path, notice: "Thank you for signing up!" }
         format.json { render :show, status: :created, location: @user }
       else
