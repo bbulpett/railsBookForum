@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/ambethia/recaptcha.git
+  revision: 422e89786ff813ff98c3b03c8f30bba6cc41d6cf
+  specs:
+    recaptcha (1.1.0)
+      json
+
+GIT
   remote: git://github.com/galetahub/ckeditor.git
   revision: 8c95708276dd9e8a9b5760abff18a298b86851f8
   specs:
@@ -173,8 +180,6 @@ GEM
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     rake (10.5.0)
-    recaptcha (1.0.2)
-      json
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -241,7 +246,7 @@ DEPENDENCIES
   pg (~> 0.18)
   puma
   rails!
-  recaptcha
+  recaptcha!
   rspec-rails
   sass-rails (>= 3.2)
   turbolinks

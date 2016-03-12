@@ -5,13 +5,15 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if verify_recaptcha(model: @user, timeout: 60)
-      @user.save!
-      session[:user_id] = @user.id
-      redirect_to root_url, notice: "Thank you for signing up!"
-    else
-      puts "ReCAPTCHA is FALSE!!"
-      render "new", alert: "ReCAPTCHA failed, please try again."
+
+    respond_to do |format|
+      if verify_recaptcha(model: @user, timeout: 30, message: "Problem with ReCAPTCHA, please try again.") && @user.save
+        format.html { redirect_to root_path, notice: "Thank you for signing up!" }
+        format.json { render :show, status: :created, location: @user }
+      else
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
     end
   end
 
