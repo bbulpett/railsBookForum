@@ -43,35 +43,19 @@
       </ul>
     </div>
   </div>
-  <!-- Modal -->
-  <div class="modal fade" id="new_user" tabindex="-1" role="dialog" aria-labelledby="sign-up-form" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Sign Up</h4>
-        </div>
-        <div class="modal-body">
-          <%= render "users/new" %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        </div>
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="new_user" role="dialog" aria-labelledby="sign-up-form" aria-hidden="true">
+    <div class="modal-dialog modal-content">
+      <div class="modal-body">
+        <%= render "users/new" %>
       </div>
     </div>
   </div>
-  <!-- Modal -->
-  <div class="modal fade" id="new_session" tabindex="-1" role="dialog" aria-labelledby="log-in-form" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Log In</h4>
-        </div>
-        <div class="modal-body">
-          <%= render "sessions/new" %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        </div>
+  <!-- Log In Modal -->
+  <div class="modal fade" id="new_session" role="dialog" aria-labelledby="log-in-form" aria-hidden="true">
+    <div class="modal-dialog modal-content">
+      <div class="modal-body">
+        <%= render "sessions/new" %>
       </div>
     </div>
   </div>

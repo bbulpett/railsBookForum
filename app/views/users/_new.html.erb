@@ -1,4 +1,4 @@
-<div id="registration-form" class="panel panel-default">
+<div id="registration-form">
   <h1>Sign Up</h1>
   <% @user = User.new %>
   <%= form_for @user do |f| %>
@@ -32,6 +32,9 @@
     </div>
     <br><%= recaptcha_tags ajax: true%><br>
 
-    <div class="actions"><%= f.submit "Sign Up", class: "btn btn-l btn-success"%></div>
+    <div class="actions">
+      <%= f.submit "Sign Up", class: "btn btn-l btn-success"%>
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+    </div>
   <% end %>
 </div>
