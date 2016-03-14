@@ -1,5 +1,6 @@
 <div id="registration-form" class="panel panel-default">
   <h1>Sign Up</h1>
+  <% @user = User.new %>
   <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
       <div class="error_messages">
