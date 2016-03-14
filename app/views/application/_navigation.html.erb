@@ -31,11 +31,11 @@
             <% end %>
           </li>
         <% else %>
-          <li><%= link_to new_user_path, class: "btn btn-sm btn-dark" do%>
+          <li><%= link_to new_user_path, class: "btn btn-sm btn-dark", data: { toggle: "modal", target: "#new_user"} do%>
               <i class="fa fa-user-plus"> Sign Up</i>
             <% end %>
           </li>
-          <li><%= link_to new_session_path, class: "btn btn-sm btn-light" do%>
+          <li><%= link_to new_session_path, class: "btn btn-sm btn-light", data: { toggle: "modal", target: "#new_session"} do%>
               <i class="fa fa-sign-in"> Log In</i>
             <% end %>
           </li>
@@ -43,7 +43,40 @@
       </ul>
     </div>
   </div>
+  <!-- Modal -->
+  <div class="modal fade" id="new_user" tabindex="-1" role="dialog" aria-labelledby="sign-up-form" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Sign Up</h4>
+        </div>
+        <div class="modal-body">
+          <%= render "users/new" %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="new_session" tabindex="-1" role="dialog" aria-labelledby="log-in-form" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Log In</h4>
+        </div>
+        <div class="modal-body">
+          <%= render "sessions/new" %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
+
 <script>
   $("ul.nav.navbar-nav>li a").on("click", function(){
     $("ul.nav.navbar-nav").find(".active").removeClass("active");
