@@ -11,6 +11,9 @@
 	    <%= password_field_tag :password %>
 	  </div>
 	  <br>
-	  <div class="actions"><%= submit_tag "Log In" %></div>
+	  <div class="actions">
+	  	<%= submit_tag "Log In", class: "btn btn-l btn-success"%>
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+	  </div>
 	<% end %>
 </div>
