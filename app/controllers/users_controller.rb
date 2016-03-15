@@ -11,6 +11,7 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         format.html { redirect_to root_path, notice: "Thank you for signing up!" }
         format.json { render :show, status: :created, location: @user }
+        UserMailer.welcome_email(@user).deliver
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
