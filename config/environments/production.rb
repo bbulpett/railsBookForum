@@ -72,7 +72,7 @@ Rails.application.configure do
     address:        ENV['MAILGUN_SMTP_SERVER'],
     user_name:      ENV['MAILGUN_SMTP_LOGIN'],
     password:       ENV['MAILGUN_SMTP_PASSWORD'],
-    domain:         'rails-5-book.heroku.com',
+    domain:         'learningrails5.com',
     authentication: 'plain',
   }
 
