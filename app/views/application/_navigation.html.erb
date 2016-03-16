@@ -43,24 +43,20 @@
       </ul>
     </div>
   </div>
-  <!-- Sign Up Modal -->
+</nav>
+
+ <!-- Sign Up Modal -->
   <div class="modal fade" id="new_user" role="dialog" aria-labelledby="sign-up-form" aria-hidden="true">
-    <div class="modal-dialog modal-content">
-      <div class="modal-body">
+
         <%= render "users/new" %>
-      </div>
-    </div>
+
   </div>
   <!-- Log In Modal -->
   <div class="modal fade" id="new_session" role="dialog" aria-labelledby="log-in-form" aria-hidden="true">
-    <div class="modal-dialog modal-content">
-      <div class="modal-body">
+    
         <%= render "sessions/new" %>
-      </div>
-    </div>
-  </div>
-</nav>
 
+  </div>
 <script>
   $("ul.nav.navbar-nav>li a").on("click", function(){
     $("ul.nav.navbar-nav").find(".active").removeClass("active");
