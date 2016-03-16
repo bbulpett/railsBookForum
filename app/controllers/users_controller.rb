@@ -13,9 +13,6 @@ class UsersController < ApplicationController
         format.json { render :show, status: :created, location: @user }
         UserMailer.welcome_email(@user).deliver
       else
-        if @user.errors.any?
-          session[:user_errors] = @user.errors
-        end
         format.html { render 'users/_new' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end

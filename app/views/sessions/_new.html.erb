@@ -1,19 +1,23 @@
-<div id="registration-form">
-	<h1>Log In</h1>
+<div class="modal-dialog modal-content">
+  <div class="modal-body">		
+		<div id="registration-form">
+			<h1>Log In</h1>
 
-	<%= form_tag sessions_path do %>
-	  <div class="field">
-	    <%= label_tag :login, 'Email or Username' %><br />
-	    <%= text_field_tag :login %>
-	  </div>
-	  <div class="field">
-	    <%= label_tag :password %><br />
-	    <%= password_field_tag :password %>
-	  </div>
-	  <br>
-	  <div class="actions">
-	  	<%= submit_tag "Log In" %>
-      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-	  </div>
-	<% end %>
+			<%= form_tag sessions_path do %>
+			  <div class="field">
+			    <%= label_tag :login, 'Email or Username' %><br />
+			    <%= text_field_tag :login %>
+			  </div>
+			  <div class="field">
+			    <%= label_tag :password %><br />
+			    <%= password_field_tag :password %>
+			  </div>
+			  <br>
+			  <div class="actions">
+			  	<%= submit_tag "Log In" %>
+		      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+			  </div>
+			<% end %>
+		</div>
+	</div>
 </div>
