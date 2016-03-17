@@ -31,11 +31,11 @@
             <% end %>
           </li>
         <% else %>
-          <li><%= link_to new_user_path, class: "btn btn-sm btn-dark", data: { toggle: "modal", target: "#new_user"} do%>
+          <li><%= link_to new_user_path, class: "btn btn-sm btn-dark", remote: true, data: { toggle: "modal", target: "#new_user_modal"} do%>
               <i class="fa fa-user-plus"> Sign Up</i>
             <% end %>
           </li>
-          <li><%= link_to new_session_path, class: "btn btn-sm btn-light", data: { toggle: "modal", target: "#new_session"} do%>
+          <li><%= link_to new_session_path, class: "btn btn-sm btn-light", remote: true, data: { toggle: "modal", target: "#new_session_modal"} do%>
               <i class="fa fa-sign-in"> Log In</i>
             <% end %>
           </li>
@@ -44,19 +44,11 @@
     </div>
   </div>
 </nav>
+<!-- Sign Up Modal -->
+<div class="modal fade" id="new_user_modal" role="dialog" aria-labelledby="sign-up-form" aria-hidden="true"></div>
+<!-- Log In Modal -->
+<div class="modal fade" id="new_session_modal" role="dialog" aria-labelledby="log-in-form" aria-hidden="true"></div>
 
- <!-- Sign Up Modal -->
-  <div class="modal fade" id="new_user" role="dialog" aria-labelledby="sign-up-form" aria-hidden="true">
-
-        <%= render "users/new" %>
-
-  </div>
-  <!-- Log In Modal -->
-  <div class="modal fade" id="new_session" role="dialog" aria-labelledby="log-in-form" aria-hidden="true">
-    
-        <%= render "sessions/new" %>
-
-  </div>
 <script>
   $("ul.nav.navbar-nav>li a").on("click", function(){
     $("ul.nav.navbar-nav").find(".active").removeClass("active");

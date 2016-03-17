@@ -73,21 +73,13 @@
         <i class="fa fa-check"></i><strong> Submit Post</strong>
       <% end %>
   <% else %>
-    <strong><%= link_to "Sign Up", new_user_path, id: "loginLinks", data: { toggle: "modal", target: "#new_user"} %>
+    <strong><%= link_to "Sign Up", new_user_path, remote: true, id: "loginLinks", data: { toggle: "modal", target: "#new_user_modal"} %>
     or
-    <%= link_to "Log In", new_session_path, id: "loginLinks", data: { toggle: "modal", target: "#new_session"} %>
+    <%= link_to "Log In", new_session_path, remote: true, id: "loginLinks", data: { toggle: "modal", target: "#new_session_modal"} %>
     to repond</strong>
   <% end %>
 </div>
 <!-- Sign Up Modal -->
-<div class="modal fade" id="new_user" role="dialog" aria-labelledby="sign-up-form" aria-hidden="true">
-
-      <%= render "users/new" %>
-
-</div>
+<div class="modal fade" id="new_user_modal" role="dialog" aria-labelledby="sign-up-form" aria-hidden="true"></div>
 <!-- Log In Modal -->
-<div class="modal fade" id="new_session" role="dialog" aria-labelledby="log-in-form" aria-hidden="true">
-
-      <%= render "sessions/new" %>
-
-</div>
+<div class="modal fade" id="new_session_modal" role="dialog" aria-labelledby="log-in-form" aria-hidden="true"></div>
