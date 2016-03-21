@@ -13,11 +13,12 @@ class UsersController < ApplicationController
     respond_to do |format|
       if verify_recaptcha(model: @user, timeout: 30, message: "Problem with ReCAPTCHA, please try again.") && @user.save
         session[:user_id] = @user.id
-        format.html { redirect_to root_path, notice: "Thank you for signing up!" }
+        format.html { redirect_to :back, notice: "Thank you for signing up!" }
         format.json { render :show, status: :created, location: @user }
         UserMailer.welcome_email(@user).deliver
       else
-        format.html { render 'users/_new' }
+        flash.now.alert = "Sign Up Failed!"
+        format.html { redirect_to :back }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
