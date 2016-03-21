@@ -1,1 +1,9 @@
-$("#new_user_modal").html("<%= escape_javascript(render 'users/new') %>");
+$("ul.errors").html("")
+<% if @user.errors.any? %>
+  <% @user.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $("#new_user_modal").html("<%= escape_javascript(render 'users/new') %>");
+  // $("#new_user_modal").modal("hide")
+<% end %>
