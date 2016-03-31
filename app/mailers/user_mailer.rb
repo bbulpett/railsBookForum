@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-	# default from: "support@learningrails5.com"
+	default from: "no-reply@learningrails5.com"
 
 	def welcome_email(user)
 		@user = user
