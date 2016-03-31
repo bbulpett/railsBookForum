@@ -1,10 +1,10 @@
 <div class="modal-dialog">
+  <div class="spinner">
+    <%= image_tag "loading.gif" %>
+  </div>
   <div class="modal-content">
       <div id="registration-form">
         <h1>Sign Up</h1>
-        <div class="spinner">
-          <%= image_tag "loading.gif" %>
-        </div>
         <%= form_for @user, remote: true, html: { style: "display:inline;" } do |f| %>
         <div class="modal-body">
           <ul class="errors"></ul>
@@ -40,6 +40,7 @@
     $(".spinner").hide();
 
     $(document).ajaxStart(function() {
+      $(".modal-content").fadeOut('slow');
       $(".spinner").fadeIn('slow');
     }).ajaxStop(function() {
         $(".spinner").hide();

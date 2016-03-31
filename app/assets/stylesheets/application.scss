@@ -283,9 +283,17 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		content: " * beta *";
 	}
 
-	.spinner img {
-		width: 50%;
+	.spinner {
+		width: 100%;
+		position: fixed;
+		top: 30%;
+		text-align: center;
 		z-index: 999;
+
+		img {
+
+			width: 20%;
+		}	
 	}
 
 	/******************* PANELS *****************/
