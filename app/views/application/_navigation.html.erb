@@ -27,16 +27,16 @@
         </li>
         <% if current_user %>
           <li><%= link_to session_path("current"), class: "btn btn-sm btn-dark", method: "delete" do %>
-              <i class="fa fa-sign-out"> Log Out</i>
+              <i class="fa fa-sign-out"><span class="registration-button-text"> Log Out</span></i>
             <% end %>
           </li>
         <% else %>
           <li><%= link_to new_user_path, class: "btn btn-sm btn-dark", remote: true, data: { toggle: "modal", target: "#new_user_modal"} do%>
-              <i class="fa fa-user-plus"> Sign Up</i>
+              <i class="fa fa-user-plus"><span class="registration-button-text"> Sign Up</span></i>
             <% end %>
           </li>
           <li><%= link_to new_session_path, class: "btn btn-sm btn-light", remote: true, data: { toggle: "modal", target: "#new_session_modal"} do%>
-              <i class="fa fa-sign-in"> Log In</i>
+              <i class="fa fa-sign-in"><span class="registration-button-text"> Log In</span></i>
             <% end %>
           </li>
         <% end %>

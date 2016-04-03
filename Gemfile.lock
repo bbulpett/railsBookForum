@@ -251,5 +251,8 @@ DEPENDENCIES
   sass-rails (>= 3.2)
   turbolinks
   tzinfo-data
-  uglifier (>= 1.3.0)
+  uglifier (>= 2.7.2)
   web-console!
+
+BUNDLED WITH
+   1.11.2
