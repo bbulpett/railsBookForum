@@ -379,6 +379,12 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		font-weight: 600;
 	}
 
+	.registration-button-text {
+		font-weight: 200;
+		font-family: 'Droid Sans', Helvetica,Arial,sans-serif;
+		font-size: 11pt;
+	}
+
 	.navbar-nav .btn-sm {
 		padding: 3px 12px;
 	}
@@ -403,7 +409,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	}
 
 	.share-button {
-		margin-top: -6px;
+		// margin-top: -6px;
 
 		ul {
 			width: 248px !important;
@@ -542,6 +548,12 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	@keyframes alertFades{
 		0%	{opacity: 1;}
 		100%{opacity: 0;}
+	}
+
+	ul.errors li {
+		margin: 10px;
+		text-align: center;
+		color: #F00;
 	}
 
 	/********************* JQUERY ELEMENTS *******************/

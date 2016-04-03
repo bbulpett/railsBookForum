@@ -1,7 +1,12 @@
 $("ul.errors").html("")
 <% if @user.errors.any? %>
 	<% @user.errors.full_messages.each do |message| %>
-		$("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+		$("ul.errors").append($("<li />").html("<%= message.html_safe %>"));
+		// $("span.rc-anchor-checkbox").css("background-color", "orange");
+		$("span.rc-anchor-checkbox").removeClass("recaptcha-checkbox-checked");
+		// $("#registration-form").bind("ajax:complete", function(event,xhr,status){
+		// 		$("g-recaptcha-response").val('');
+		// 	};
 	<% end %>
 <% else %>
 	$("#new_user_modal").modal("hide")

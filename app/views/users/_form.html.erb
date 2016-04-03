@@ -25,7 +25,8 @@
             <%= f.label :password_confirmation %><br>
             <%= f.password_field :password_confirmation, required: true, placeholder: "Password again" %>
           </div>
-          <br><%= recaptcha_tags ajax: true%><br>
+
+          <%= render 'recaptcha' %>
 
           <div class="modal-footer actions">
             <%= f.submit "Sign Up", class: "btn btn-l btn-success"%>
@@ -38,12 +39,13 @@
 
   <script>
     $(".spinner").hide();
+    // $(".g-recaptcha").grecaptcha.reset();
 
-    $(document).ajaxStart(function() {
-      $(".modal-content").fadeOut('slow');
-      $(".spinner").fadeIn('slow');
-    }).ajaxStop(function() {
-        $(".spinner").hide();
-    });
+    // $(document).ajaxStart(function() {
+    //   $(".modal-content").fadeOut('slow');
+    //   $(".spinner").fadeIn('slow');
+    // }).ajaxStop(function() {
+    //     $(".spinner").hide();
+    // });
   </script>
 </div>

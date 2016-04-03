@@ -12,9 +12,10 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
 
     respond_to do |format|
-      if verify_recaptcha(model: @user, timeout: 20, message: "Problem with ReCAPTCHA, please try again.") && @user.save
+      if verify_recaptcha && @user.save
         session[:user_id] = @user.id
-        format.html { redirect_to :back, notice: "Thank you for signing up!" }
+        flash[:notice] = "Thank you for signing up!"
+        format.html 
         format.js {render js: "window.location = '#{root_path}';"}
         format.json { render :show, status: :created, location: @user }
         
@@ -22,7 +23,7 @@ class UsersController < ApplicationController
           UserMailer.welcome_email(@user).deliver
         end
       else
-        flash.now.alert = "Sign Up Failed!"
+        flash[:alert] = "Sign Up Failed!"
         format.html { redirect_back(fallback_location: root_path) }
         format.js
         format.json { render json: @user.errors, status: :unprocessable_entity }
