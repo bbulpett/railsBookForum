@@ -1,5 +1,12 @@
 <h1>Screencasts and Lectures</h1>
 <p>The following is a collection of lectures and tutorial screencasts to accompany and expand upon <em>Learning Rails 5</em></p>
+
+<% if current_user && current_user.admin %>
+  <%= link_to "#", class: "btn btn-l btn-success" do %>
+    <i class="fa fa-plus"></i> <strong>Add a Video</strong>
+  <% end %>
+<% else end %>
+
 <br>
 <div class="container videoContainer"> 
       <div class="row">
@@ -38,3 +45,13 @@
             </div>
       </div>
 </div>
+
+<!-- <div id="chapter1_modal" class="modal hide fade" tabindex="-1" role="dialog">
+      <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+                  <h3>Video</h3>
+      </div>
+      <div class="modal-body">
+            <iframe src="https://www.youtube.com/embed/tHw-hbr6oPI" allowfullscreen style="zoom:0.60" width="75%" frameborder="0"></iframe>
+      </div>
+</div> -->
