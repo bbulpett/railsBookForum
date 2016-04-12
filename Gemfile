@@ -27,7 +27,7 @@ gem 'puma'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Doorkeeper is an OAuth 2 provider for Rails and Grape
-gem 'doorkeeper', github: "doorkeeper-gem/doorkeeper"
+# gem 'doorkeeper', github: "doorkeeper-gem/doorkeeper"
 # ReCAPTCHA plugin adds helpers for the reCAPTCHA API
 gem "recaptcha", require: "recaptcha/rails", github: "ambethia/recaptcha"
 

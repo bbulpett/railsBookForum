@@ -6,13 +6,6 @@ GIT
       json
 
 GIT
-  remote: git://github.com/doorkeeper-gem/doorkeeper.git
-  revision: 780cf588ff99341d74d2d1de0ffe2d05d6254027
-  specs:
-    doorkeeper (4.0.0.rc2)
-      railties (>= 4.2)
-
-GIT
   remote: git://github.com/galetahub/ckeditor.git
   revision: 8c95708276dd9e8a9b5760abff18a298b86851f8
   specs:
@@ -244,7 +237,6 @@ DEPENDENCIES
   carrierwave
   ckeditor!
   coffee-rails!
-  doorkeeper!
   font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails

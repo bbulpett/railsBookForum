@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  use_doorkeeper
+  # use_doorkeeper
+  
   resources :forums do
     resources :topics do
       resources :posts
