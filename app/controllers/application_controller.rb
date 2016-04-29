@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, alert: "Not authorized" if current_user.nil? or !current_user.admin?
   end
 
+  # Adding methods to test ip address blocking
   def block_ip_addresses
     head :unauthorized if current_ip_address == "24.196.174.32"
   end
