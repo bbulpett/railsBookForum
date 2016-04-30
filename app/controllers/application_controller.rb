@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
 
   def block_ip_addresses
-    head :unauthorized if current_ip_address == "24.196.174.32"
+    head :unauthorized if current_ip_address == "184.154.139.9"
   end
 
   def current_ip_address
