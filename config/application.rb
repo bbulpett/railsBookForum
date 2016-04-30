@@ -13,5 +13,8 @@ module RailsBookForum
     # -- all .rb files in that directory are automatically loaded.
 
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+
+    # Rack middleware for blocking & throttling abusive requests
+  	config.middleware.use Rack::Attack
   end
 end

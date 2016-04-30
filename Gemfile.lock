@@ -169,6 +169,8 @@ GEM
     puma (2.16.0)
     rack (2.0.0.alpha)
       json
+    rack-attack (4.4.1)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails-deprecated_sanitizer (1.0.3)
@@ -245,6 +247,7 @@ DEPENDENCIES
   mini_magick
   pg (~> 0.18)
   puma
+  rack-attack
   rails!
   recaptcha!
   rspec-rails
