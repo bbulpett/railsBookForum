@@ -26,16 +26,16 @@
             </ul>
         </li>
         <% if current_user %>
-          <li><%= link_to session_path("current"), class: "btn btn-sm btn-dark", method: "delete" do %>
+          <li class="btn-registration"><%= link_to session_path("current"), class: "btn btn-sm btn-dark", method: "delete" do %>
               <i class="fa fa-sign-out"><span class="registration-button-text"> Log Out</span></i>
             <% end %>
           </li>
         <% else %>
-          <li><%= link_to new_user_path, class: "btn btn-sm btn-dark", remote: true, data: { toggle: "modal", target: "#new_user_modal"} do%>
+          <li class="btn-registration"><%= link_to new_user_path, class: "btn btn-sm btn-dark", remote: true, data: { toggle: "modal", target: "#new_user_modal"} do%>
               <i class="fa fa-user-plus"><span class="registration-button-text"> Sign Up</span></i>
             <% end %>
           </li>
-          <li><%= link_to new_session_path, class: "btn btn-sm btn-light", remote: true, data: { toggle: "modal", target: "#new_session_modal"} do%>
+          <li class="btn-registration"><%= link_to new_session_path, class: "btn btn-sm btn-light", remote: true, data: { toggle: "modal", target: "#new_session_modal"} do%>
               <i class="fa fa-sign-in"><span class="registration-button-text"> Log In</span></i>
             <% end %>
           </li>
@@ -48,10 +48,3 @@
 <div class="modal fade" id="new_user_modal" role="dialog" aria-labelledby="sign-up-form" aria-hidden="true"></div>
 <!-- Log In Modal -->
 <div class="modal fade" id="new_session_modal" role="dialog" aria-labelledby="log-in-form" aria-hidden="true"></div>
-
-<script>
-  $("ul.nav.navbar-nav>li a").on("click", function(){
-    $("ul.nav.navbar-nav").find(".active").removeClass("active");
-    $(this).parent().addClass("active");
-  });
-</script>
