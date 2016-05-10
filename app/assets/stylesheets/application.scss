@@ -510,6 +510,9 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		color: #FFF;
 	}
 
+	.btn-registration {
+		border: none !important;
+	}
 
 	/********************* ALERTS *******************/
 	#alert-area .alert {
@@ -576,7 +579,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	.share-button {
 		text-align: center;
 	}
-	ul.nav.navbar-nav>li.active a {
+	.active {
 		border: none;
 		text-decoration: underline;
 		background-color: transparent;
@@ -660,7 +663,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		display: none;
 	}
 
-	ul.nav.navbar-nav>li.active a {
+	.active {
 		background-color: transparent;
 		text-decoration: none;
 		border-bottom: 4px solid $bookThemeColor;
