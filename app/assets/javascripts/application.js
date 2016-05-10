@@ -19,6 +19,12 @@
 //= require_tree .
 
 $(document).on('page:change', function(){
+
+	$("ul.nav.navbar-nav>li a").on("click", function(){
+	   $("ul.nav.navbar-nav").find(".active").removeClass("active");
+	   $(this).parent().addClass("active");
+	});
+
 	$('[id=flip]').click(function(){
 		$(this).next('#panel').slideToggle('fast');
 	});
@@ -36,4 +42,5 @@ $(document).on('page:change', function(){
 
 		$('[id=beginNewPostButton').show();
 	});
+
 });

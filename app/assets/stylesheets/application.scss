@@ -369,7 +369,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 
 	.btn-dark {
 		color: #FFF;
-		background-color: $bookThemeColor;
+		background-color: $bookThemeColor !important;
 		box-shadow: 2px 2px 2px darken($bookThemeColor, 25%);
 	}
 
@@ -405,7 +405,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	}
 
 	a.btn.btn-dark:hover {
-		background-color: darken($bookThemeColor, 15%) !important;
+		background-color: darken($bookThemeColor, 25%) !important;
 	}
 
 	.share-button {
@@ -662,9 +662,8 @@ $breakpoint-custom-iPhoneRetina: 320px;
 
 	ul.nav.navbar-nav>li.active a {
 		background-color: transparent;
-		border-top: 8px solid #E7E7E7;
-		margin-top: -8px;
 		text-decoration: none;
+		border-bottom: 4px solid $bookThemeColor;
 	}
 
 	/* centered navigation */
