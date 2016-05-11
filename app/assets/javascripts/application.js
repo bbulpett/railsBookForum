@@ -19,11 +19,6 @@
 //= require_tree .
 
 $(document).on('page:change', function(){
-	$('ul.nav > li > a').click(function () {
-    // e.preventDefault();
-    $('ul.nav > li > a').parent().removeClass('active');
-    $(this).parent().addClass('active');                
-  });
 
 	$('[id=flip]').click(function(){
 		$(this).next('#panel').slideToggle('fast');
