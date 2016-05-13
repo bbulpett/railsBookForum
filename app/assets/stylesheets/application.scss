@@ -26,7 +26,10 @@ $bookThemeColor: #B63E97;
 	font-family: TypewriterURW-Lig;
 	src: asset-url('TypewriterURW-Lig.ttf');
 }
-
+@font-face {
+	font-family: 'Droid Sans';
+	src: asset-url('DroidSans.ttf');
+}
 /*** RESPONSIVE BREAKPOINTS ***/
 $breakpoint-widescreen: 1200px;
 $breakpoint-desktop: 992px;
@@ -214,6 +217,9 @@ $breakpoint-custom-iPhoneRetina: 320px;
 			height: 240px;
 			margin: 0 auto;
 			border: 2px solid #AAA;
+			position:absolute;
+			background-color:transparent;
+			z-index:999999999999999999999
 		}
 
 		p {
