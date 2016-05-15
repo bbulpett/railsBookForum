@@ -326,6 +326,18 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		}
 	}
 
+	.blocking-alert {
+		width: 50%;
+		height: 360px;
+		z-index: 99999;
+		position: absolute;
+		top: 25%;
+		left: 25%;
+		border: 3px solid $bookThemeColor;
+		background: lighten($bookThemeColor, 75%);
+		padding-top: 150px;
+	}
+
 	/********************* FORMS *******************/
 	.title-field {
 		width: 75%;
