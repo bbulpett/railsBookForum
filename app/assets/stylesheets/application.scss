@@ -326,6 +326,28 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		}
 	}
 
+	.blocking-alert {
+		width: 50%;
+		min-width: 290px;
+		height: 33%;
+		z-index: 99999;
+		position: absolute;
+		top: 30%;
+		left: 25%;
+		border: 3px solid $bookThemeColor;
+		background-color: lighten($bookThemeColor, 50%);
+		box-shadow: 20px 20px 20px 10px #555;
+
+		img {
+			display: block;
+			width: 90%;
+			max-width: 362px;
+			margin: 15px auto;
+			border-radius: 5px;
+			opacity: 0.85;
+		}
+	}
+
 	/********************* FORMS *******************/
 	.title-field {
 		width: 75%;
@@ -897,5 +919,9 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		text-indent: none;
 		margin-left: -50px;
 		padding: 0;
+	}
+
+	.blocking-alert {
+		left: 10%;
 	}
 }
