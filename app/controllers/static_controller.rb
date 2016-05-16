@@ -16,4 +16,7 @@ class StaticController < ApplicationController
 
   def share
   end
+
+  def education
+  end
 end
