@@ -1,11 +1,11 @@
 
 <div id="topicHeading">
-  <h3 id="topicTitle"><span style="color: #ff54e8;">topic</span> <%= @topic.title %> <span style="color: #88f738;">< <em><%= @forum.name %></em></span></h3>
+  <h3 id="topicTitle"><span style="color: #ff54e8;">topic</span> <%= @topic.title %> <span style="color: #88f738;">&lt; <em><%= @forum.name %></em></span></h3>
   <br>
 </div>
 
 <table class="table table-bordered">
-  <tr>
+  <tr style="background: #F7F7F7;">
     <td>
       <strong>Last post by </strong>
       <em><%= @topic.posts.last.user.username %></em>
