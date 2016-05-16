@@ -97,6 +97,13 @@ $breakpoint-custom-iPhoneRetina: 320px;
 
 	#content {
 		text-align: center;
+		display: block;
+		margin: 20px auto 160px;
+		width: 95%;
+
+		#carousel {
+			height: 185px;
+		}
 	}
 
 	h1, h2, p {
@@ -351,7 +358,69 @@ $breakpoint-custom-iPhoneRetina: 320px;
 			opacity: 0.85;
 		}
 	}
+	#carousel {
+		width: 35%;
+  	min-width: 240px;
+	}
 
+	.carousel-fade {
+		width: 100%;
+		position: relative;
+		float: none;
+		margin: 0 auto;
+
+		.carousel-indicators {
+			display: none;
+		}
+
+	  .carousel-inner {
+			height: 100%;
+
+	    .item {
+	      transition-property: opacity;
+	      background-color: transparent;
+	      height: 100%;
+	      border: none;
+	      max-height: 360px;
+	    }
+	    
+	    .item,
+	    .active.left,
+	    .active.right {
+	        opacity: 0;
+	    }
+
+	    .active,
+	    .next.left,
+	    .prev.right {
+	        opacity: 1;
+	    }
+
+	    .next,
+	    .prev,
+	    .active.left,
+	    .active.right {
+	        left: 0;
+	        transform: translate3d(0, 0, 0);
+	    }
+	  }
+	}
+
+	#inner-content {
+		padding: 25px;
+
+		p {
+			font-size: 12pt;
+			color: #555;
+			margin: 0 auto;
+			max-width: 418px;
+			float: none;
+
+			strong {
+				color: #252525;
+			}
+		}
+	}
 	/********************* FORMS *******************/
 	.title-field {
 		width: 75%;
@@ -763,6 +832,23 @@ $breakpoint-custom-iPhoneRetina: 320px;
 			width: 150px;
 		}
 	}
+
+	#content {
+		width: 95%;
+		margin: 20px 2.5% 140px;
+
+		#carousel {
+			float: left;
+			width: 40%;
+			height: auto;
+		}
+
+		#inner-content {
+			float: right;
+			width: 60%;
+			padding-top: 0;
+		}
+	}
 }
 
 @media only screen and (min-width : $breakpoint-desktop) {
@@ -805,6 +891,31 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		}
 		#author-img img {
 			width: 210px;
+		}
+	}
+
+	#content {
+		width: 85%;
+		margin: 20px 7.5% 140px;
+
+		#carousel {
+			// float: left;
+			width: 45%;
+			height: auto;
+
+			.item {
+				max-width: 40%;
+
+				img {
+					max-width: 300px;
+				}
+			}
+		}
+
+		#inner-content {
+			// float: right;
+			width: 55%;
+			padding-top: 0;
 		}
 	}
 
@@ -874,6 +985,31 @@ $breakpoint-custom-iPhoneRetina: 320px;
 			height: 210px;
 			margin: 0 auto;
 			border: 2px solid #AAA;
+		}
+	}
+
+	#content {
+		width: 80%;
+		margin: 20px 15% 160px;
+
+		#carousel {
+			float: left;
+			width: 40%;
+			height: auto;
+
+			.item {
+				max-width: 40%;
+
+				img {
+					max-width: 300px;
+				}
+			}
+		}
+
+		#inner-content {
+			float: right;
+			width: 50%;
+			padding-top: 0;
 		}
 	}
 }
