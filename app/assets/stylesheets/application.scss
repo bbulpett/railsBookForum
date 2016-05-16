@@ -98,7 +98,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	#content {
 		text-align: center;
 		display: block;
-		margin: 20px auto 160px;
+		margin: 20px auto 0;
 		width: 95%;
 
 		#carousel {
@@ -194,9 +194,6 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	}
 
 	#topicHeading {
-		text-align: center;
-		max-width: 768px;
-		margin: 0 auto;
 
 		td {
 			width: 33%;
@@ -211,8 +208,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		padding: 5px 10px;
 		border-radius: 4px;
 		display: inline-block;
-		margin-left: auto;
-	  margin-right: auto;
+		text-align: center;
 	}
 
 	.videoBox {
