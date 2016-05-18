@@ -58,25 +58,9 @@
 </div>
 
 <script>
-  $(function() {
-    $(".video").click(function () {
-      var theModal = $(this).data("target"),
-      videoSRC = $(this).attr("data-video"),
-      videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
-      $(theModal + ' iframe').attr('src', videoSRCauto);
-      $(theModal + ' button.close').click(function () {
-        $(theModal + ' iframe').attr('src', videoSRC);
-      });
-    });
+  $('.videoBox').click(function(){
+    $(this).css("width: 500px;");
+    // $("body").css.("background", "color: #000;");
   });
 </script>
 
-<!-- <div id="chapter1_modal" class="modal hide fade" tabindex="-1" role="dialog">
-      <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">×</button>
-                  <h3>Video</h3>
-      </div>
-      <div class="modal-body">
-            <iframe src="https://www.youtube.com/embed/tHw-hbr6oPI" allowfullscreen style="zoom:0.60" width="75%" frameborder="0"></iframe>
-      </div>
-</div> -->
