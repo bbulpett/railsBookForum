@@ -215,27 +215,17 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		margin-bottom: 20px;
 		height: 240px;
 
-		iframe, p {
+		p, img {
 			width: 320px;
 			height: 240px;
 			margin: 0 auto;
 			border: 2px solid #AAA;
-			// width: 320px;
-			// height: 240px;
-			// margin: 0 auto;
-			// border: 2px solid #AAA;
-			// position:absolute;
-			// background-color:transparent;
-			// z-index:999999999999999999999
 		}
 
 		p {
 			font-size: 14pt;
 			padding-top: 50px;
-		}
-
-		img {
-			width: 320px;
+			text-align: center;
 		}
 	}
 
@@ -921,11 +911,15 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	}
 
 	.videoBox {
-		iframe, p {
+		p, img {
 			width: 300px;
 			height: 225px !important;
 			margin: 0 auto;
 			border: 2px solid #AAA;
+		}
+
+		p {
+			text-align: center;
 		}
 	}
 }
@@ -981,11 +975,15 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	}
 
 	.videoBox {
-		iframe, p {
+		p, img {
 			width: 280px;
 			height: 210px;
 			margin: 0 auto;
 			border: 2px solid #AAA;
+		}
+
+		p {
+			text-align: center;
 		}
 	}
 
