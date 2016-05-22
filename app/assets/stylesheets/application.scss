@@ -223,9 +223,12 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		}
 
 		p {
-			font-size: 14pt;
+			color: #000;
+			font-size: 20pt;
 			padding-top: 50px;
 			text-align: center;
+			background: linear-gradient(rgba(255, 255 ,255 , .55), rgba(255, 255 ,255 , .55)), image-url("book-cover.jpg") no-repeat center 0, $bookThemeColor;
+			background-size: 215px;
 		}
 	}
 
@@ -298,7 +301,6 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		z-index: 999;
 
 		img {
-
 			width: 20%;
 		}	
 	}
@@ -911,6 +913,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	}
 
 	.videoBox {
+
 		p, img {
 			width: 300px;
 			height: 225px !important;
