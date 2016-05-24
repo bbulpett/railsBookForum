@@ -237,7 +237,6 @@ $breakpoint-custom-iPhoneRetina: 320px;
 			color: #FFF;
 			top: 5px;
 			text-indent: 15px;
-			z-index: 99999;
 		}
 	}
 
@@ -422,6 +421,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 			}
 		}
 	}
+
 	/********************* FORMS *******************/
 	.title-field {
 		width: 75%;
