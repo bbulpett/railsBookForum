@@ -80,7 +80,11 @@
 <script>
   $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
     event.preventDefault();
-      $(this).ekkoLightbox();
+    if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+        $('.modal').find('.modal-dialog').css({"width":"100%"});
+     } else {
+        $(this).ekkoLightbox();
+     }
   });
 </script>
 
