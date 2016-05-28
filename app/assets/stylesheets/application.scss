@@ -524,6 +524,21 @@ $breakpoint-custom-iPhoneRetina: 320px;
 			padding: 0;
 			margin: 0 -2px;
 		}
+
+		li a {
+			display: inline;
+			margin: -2px -8px;
+			padding: 0;
+		}
+
+		li a:hover {
+			background: none;
+		}
+
+		li:hover {
+			opacity: 0.75;
+		}
+
 		.dropdown-menu i {
 			color: #FFF;
 			text-align: center;
