@@ -514,27 +514,24 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		// margin-top: -6px;
 
 		ul {
-			width: 248px !important;
+			width: 251px;
 			padding: 0; 
 			list-style-type: none;
-			text-indent: none;
 		}
 		li {
+			text-indent: 0;
+			width: 50px !important;
+			margin: 0 -5px;
+		}
+		li, a.share-link {
+			margin: 0;
 			display: inline;
-			padding: 0;
-			margin: 0 -2px;
 		}
-
-		li a {
-			display: inline;
-			margin: -2px -8px;
-			padding: 0;
+		a.share-link {
+			position: relative;
+			width: 48px !important;
+			margin: 0 -20px;
 		}
-
-		li a:hover {
-			background: none;
-		}
-
 		li:hover {
 			opacity: 0.75;
 		}
