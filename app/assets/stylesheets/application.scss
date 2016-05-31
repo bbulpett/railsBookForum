@@ -511,53 +511,51 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	}
 
 	.share-button {
-		// margin-top: -6px;
-
 		ul {
-			width: 251px;
+			background: none;
+			border: none;
+			width: 300px;
 			padding: 0; 
 			list-style-type: none;
 		}
-		li {
-			text-indent: 0;
-			width: 50px !important;
-			margin: 0 -5px;
-		}
-		li, a.share-link {
-			margin: 0;
-			display: inline;
-		}
-		a.share-link {
-			position: relative;
-			width: 48px !important;
-			margin: 0 -20px;
-		}
-		li:hover {
-			opacity: 0.75;
+		.btn-group {
+			width: 300px;
+			a {
+				background: none;
+				width: 60px;
+				height: 60px;
+				margin: 0;
+				border-radius: 0;
+				padding: 15px 0 0 5px;
+			}
 		}
 
-		.dropdown-menu i {
-			color: #FFF;
-			text-align: center;
-			height: 50px;
-			width: 50px;
-			margin: 0;
-			padding: 10px;
-		}
-		i.fa-pinterest {
-			background: #c5282f
-		}
-		i.fa-twitter {
-			background: #6cdfea
-		}
-		i.fa-facebook {
-			background: #3b5998
-		}
-		i.fa-google-plus {
-			background: #e34429
-		}
-		i.fa-paper-plane {
-			background: #00aaa7
+		.dropdown-menu {
+			ul {
+				width: 300px;
+			}
+			.btn {
+				width: 60px;
+			}
+			i {
+				color: #FFF;
+				text-align: center;
+			}
+			i.fa-twitter, a.twitter {
+				background: #6cdfea;
+			}
+			i.fa-linkedin, a.linkedin {
+				background: #006599;
+			}
+			i.fa-facebook, a.facebook {
+				background: #3b5998;
+			}
+			i.fa-google-plus, a.google-plus {
+				background: #e34429;
+			}
+			i.fa-paper-plane, a.paper-plane {
+				background: #00aaa7;
+			}
 		}
 	}
 
@@ -862,6 +860,15 @@ $breakpoint-custom-iPhoneRetina: 320px;
 			padding-top: 0;
 		}
 	}
+
+	.share-button {
+
+		a.btn {
+			i {
+				margin-top: 8px;
+			}
+		}
+	}
 }
 
 @media only screen and (min-width : $breakpoint-desktop) {
@@ -946,6 +953,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 			text-align: center;
 		}
 	}
+
 }
 
 @media only screen and (min-width: $breakpoint-widescreen) {

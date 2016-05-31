@@ -16,14 +16,8 @@
         <li class="<%= 'active' if current_page?(screencasts_path) %>"><%= link_to "Screencasts", screencasts_path %></li>
         <li class="<%= 'active' if current_page?(forums_path) %>"><%= link_to "Forum", forums_path %></li>
         <li class="<%= 'active' if current_page?(education_path) %>"><%= link_to "Teach", education_path %></li>
-        <li class="share-button dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="fa fa-share-square-o"></i>Share</a>
-            <ul class="dropdown-menu share-menu">
-              <li><i class="fa fa-pinterest fa-2x"></i></li>
-              <li><a href="https://twitter.com/intent/tweet" data-url="http://learningrails5.com" class="share-link" data-via="learningrails5" data-toggle="modal" ><i class="fa fa-twitter fa-2x"></i></a></li>
-              <li><i class="fa fa-facebook fa-2x"></i></li>
-              <li><i class="fa fa-google-plus fa-2x"></i></li>
-              <li><i class="fa fa-paper-plane fa-2x"></i></li>
-            </ul>
+        <li class="share-button"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="fa fa-share-square-o"></i>Share</a>
+          <%= render 'share' %>
         </li>
         <% if current_user %>
           <li class="btn-registration"><%= link_to session_path("current"), class: "btn btn-sm btn-dark", method: "delete" do %>
