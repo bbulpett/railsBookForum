@@ -20,7 +20,7 @@
   </tr>
   <% @forum.topics.each do |topic| %>
     <tr>
-      <td><%= link_to (topic.title), [ @forum, topic ] %>
+      <td><%= link_to (topic.title), [ @forum, topic ], class: "topic-link"%>
       <td class="center"><%= topic.posts.count %></td>
       <% if topic.posts.any? %>
         <td class="right"><%= topic.posts.last.updated_at.to_time.strftime("%D at %I:%M %p") %> by <strong><%= topic.posts.last.user.username %></strong></td>
