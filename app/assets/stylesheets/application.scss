@@ -312,6 +312,11 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	}
 
 	/******************* PANELS *****************/
+
+	#share_modal {
+		width: 550px;
+	}
+
 	.panel-themed {
 		text-align: left;
 
@@ -1101,7 +1106,3 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	margin: 20px 10%;
 }
 
-#share_modal {
-	width: 550px;
-	height: 420px;
-}
