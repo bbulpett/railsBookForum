@@ -314,7 +314,23 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	/******************* PANELS *****************/
 
 	#share_modal {
-		width: 550px;
+		width: 575px;
+		height: 520px;
+		min-height: 520px;
+		overflow: hidden;
+
+		iframe {
+			width: 95%;
+			height: 95%;
+			min-height: 400px;
+		}
+
+		.modal-header {
+			button {
+				position: absolute;
+				right: 50px;
+			}
+		}
 	}
 
 	.panel-themed {
