@@ -33,8 +33,6 @@ gem "recaptcha", require: "recaptcha/rails", github: "ambethia/recaptcha"
 
 # Kaminari gem does pagination and stuff
 gem 'kaminari', '0.16.3'
-# Thredded is a Rails messageboard (forum) engine
-# gem 'thredded', github: 'jayroh/thredded'
 
 # Make it pretty
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -60,6 +58,7 @@ group :development do
 end
 
 gem 'rack-attack'
-
+# Support Cross-Origin Resource Sharing
+gem 'rack-cors', :require => 'rack/cors'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
