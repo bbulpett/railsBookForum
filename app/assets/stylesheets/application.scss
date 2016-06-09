@@ -1108,12 +1108,16 @@ $breakpoint-custom-iPhoneRetina: 320px;
 
 	.videoContainer {
 		text-indent: none;
-		margin-left: -50px;
+		width: 100%;
 		padding: 0;
 	}
 
 	.blocking-alert {
 		left: 10%;
+	}
+
+	.videoBox {
+		width: 100%;
 	}
 }
 
