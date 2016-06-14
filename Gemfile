@@ -57,6 +57,9 @@ group :development do
   gem 'capybara'
 end
 
+# SEO
+gem 'meta-tags'
+# Blacklisting
 gem 'rack-attack'
 # Support Cross-Origin Resource Sharing
 gem 'rack-cors', :require => 'rack/cors'
