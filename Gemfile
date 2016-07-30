@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
-gem 'rails', :git => 'git://github.com/rails/rails.git'
+ruby '2.3.0'
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', '~> 5.0.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
@@ -26,6 +27,8 @@ gem 'puma'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# Devise authentication
+gem 'devise'
 # Doorkeeper is an OAuth 2 provider for Rails and Grape
 # gem 'doorkeeper', github: "doorkeeper-gem/doorkeeper"
 # ReCAPTCHA plugin adds helpers for the reCAPTCHA API
