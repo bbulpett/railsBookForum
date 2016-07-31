@@ -18,13 +18,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).on('page:change', function(){
-	$('[id=flip]').click(function(){
-		$(this).next('#panel').slideToggle('fast');
-	});
-});
-
-document.addEventListener("DOMContentLoaded", function(event) {
+$(document).on('turbolinks:load', function(){
 
 	$('[id=flip]').click(function(){
 		$(this).next('#panel').slideToggle('fast');

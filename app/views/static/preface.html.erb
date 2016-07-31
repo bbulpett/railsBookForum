@@ -1,133 +1,135 @@
-<h3 id="flip">Foreword</h3>
-<div id="panel">
-<p>
-	 I came to Rails in 2010. At the time I was doing contract work as a QA Engineer in Raleigh, NC. Previous to this I was an out of work software tester. After following my wife to Asheville, NC for her university teaching position I decided I wanted to move from software testing to development work. Asheville is a small market and finding work was tough, so Raleigh was one of my only options. At the time Rails was at version 2.x. Though I was only testing, not developing Rails apps, the learning curve was steep. The process of putting all the pieces of a Rails App in place; GIT, Bundler, Gems, Gemfiles, RVM was daunting to say the least. “Drinking from a fire hose” was the term we used. I was living and working in Raleigh during the week, and going home to be with my wife on the weekend. This living arrangement gave me lots of time to explore this new framework. I wrote test scripts during the day, and spent my evenings working through Rails tutorials. I owe a debt of gratitude to many of the engineers I worked with on the Entitlement Services team at Red Hat. Specifically Brenton Leanhardt for his patience and mentoring in learning Ruby and Linux. At the time Rails was only about 5 years old and there were still questions of whether or not Rails was enterprise ready. Those questions have since fallen by the wayside, and Rails is now considered a full fledged enterprise development platform. Rails is no longer a second class citizen to Java or PHP, and is arguably at the top of the web framework pecking order.
-</p>
-<p>
-I began teaching Rails in the Fall of 2014 at Asheville Buncombe Technical College. By far the biggest hurdle I find my students are faced with in getting started with Rails is setting up the Rails development environment. To begin with Rails is not very Windows Friendly. Unless you own a MAC or are a Linux Guru you are already a second class citizen in the Rails world (See my side note in Chapter One entitle “In Defense of Windows”). But, be encouraged. Microsoft is taking steps to make the Rails experience better. That being said, if you want the full Rails development experience you must still own a MAC or use some flavor of Linux. After this, your challenges are not over. Generally, you want to install some kind of version control for Ruby (RVM or RBENV), along with any number of system level packages for Rails. I say all this not to scare you, but to prepare you. Getting your development environment setup can be daunting, but I promise you, it will be worth it. Think of it as a right of passage for Rails development. Once your environment is property set up you seldom have to revisit it in any sophisticated way, or if you do, you can usually correct whatever problem you are having pretty quickly.
-</p>
-<p>
-Finally, I want to encourage you to learn Rails, and assure you that you will benefit from this book even if you do not go on to become a Rails developer. I can say this with confidence because Rails has become the gold standard for Model View Controller (MVC) architecture in Web Development. In addition to the general MVC structure Rails has also created a workflow around migrations, dev ops tasks, REST, GIT and community support. For all these reasons, even if you do not go on to do great things in Rails, you will encounter some if not all of these challenges in whatever web development platform you choose to work in. By exposing yourself to Rails and its solutions to these challenges you will learn best practices that can be applied to other frameworks and workflows.
-<br>
-<br>
---J. Mark Locklear
-</p>
-</div>
+<div data-turbolinks="false">
+	<h3 id="flip">Foreword</h3>
+	<div id="panel">
+	<p>
+		 I came to Rails in 2010. At the time I was doing contract work as a QA Engineer in Raleigh, NC. Previous to this I was an out of work software tester. After following my wife to Asheville, NC for her university teaching position I decided I wanted to move from software testing to development work. Asheville is a small market and finding work was tough, so Raleigh was one of my only options. At the time Rails was at version 2.x. Though I was only testing, not developing Rails apps, the learning curve was steep. The process of putting all the pieces of a Rails App in place; GIT, Bundler, Gems, Gemfiles, RVM was daunting to say the least. “Drinking from a fire hose” was the term we used. I was living and working in Raleigh during the week, and going home to be with my wife on the weekend. This living arrangement gave me lots of time to explore this new framework. I wrote test scripts during the day, and spent my evenings working through Rails tutorials. I owe a debt of gratitude to many of the engineers I worked with on the Entitlement Services team at Red Hat. Specifically Brenton Leanhardt for his patience and mentoring in learning Ruby and Linux. At the time Rails was only about 5 years old and there were still questions of whether or not Rails was enterprise ready. Those questions have since fallen by the wayside, and Rails is now considered a full fledged enterprise development platform. Rails is no longer a second class citizen to Java or PHP, and is arguably at the top of the web framework pecking order.
+	</p>
+	<p>
+	I began teaching Rails in the Fall of 2014 at Asheville Buncombe Technical College. By far the biggest hurdle I find my students are faced with in getting started with Rails is setting up the Rails development environment. To begin with Rails is not very Windows Friendly. Unless you own a MAC or are a Linux Guru you are already a second class citizen in the Rails world (See my side note in Chapter One entitle “In Defense of Windows”). But, be encouraged. Microsoft is taking steps to make the Rails experience better. That being said, if you want the full Rails development experience you must still own a MAC or use some flavor of Linux. After this, your challenges are not over. Generally, you want to install some kind of version control for Ruby (RVM or RBENV), along with any number of system level packages for Rails. I say all this not to scare you, but to prepare you. Getting your development environment setup can be daunting, but I promise you, it will be worth it. Think of it as a right of passage for Rails development. Once your environment is property set up you seldom have to revisit it in any sophisticated way, or if you do, you can usually correct whatever problem you are having pretty quickly.
+	</p>
+	<p>
+	Finally, I want to encourage you to learn Rails, and assure you that you will benefit from this book even if you do not go on to become a Rails developer. I can say this with confidence because Rails has become the gold standard for Model View Controller (MVC) architecture in Web Development. In addition to the general MVC structure Rails has also created a workflow around migrations, dev ops tasks, REST, GIT and community support. For all these reasons, even if you do not go on to do great things in Rails, you will encounter some if not all of these challenges in whatever web development platform you choose to work in. By exposing yourself to Rails and its solutions to these challenges you will learn best practices that can be applied to other frameworks and workflows.
+	<br>
+	<br>
+	--J. Mark Locklear
+	</p>
+	</div>
 
-<h3 id="flip">Preface</h3>
-<div id="panel">
-<p>
-What is wrong in the world? Web Development. It is way harder than it has to be.
-</p>
-<p>
-Everyone cool seems to agree: Ruby on Rails is an amazing way to build web applications. Ruby is a powerful and flexible programming language, and Rails takes advantage of that flexibility to build a web application framework that takes care of a tremendous amount of work for the developer. Everything sounds great!
-</p>
-<p>
-Except, well… all the Ruby on Rails books talk about this “Model-View-Controller” thing, and they start deep inside the application, close to the database, most of the time. From an experienced Rails developer’s perspective, this makes sense—the framework’s power lies largely in making it easy for developers to create a data model quickly, layer controller logic on top of that, and then, once all the hard work is done, put a thin layer of interface view on the very top. It’s good programming style, and it makes for more robust applications. Advanced Ajax functionality seems to come almost for free!
-</p>
-<p>
-From the point of view of someone learning Ruby on Rails, however, that race to show off Rails’ power can be extremely painful. There’s a lot of seemingly magical behavior in Rails that works wonderfully—until one of the incantations isn’t quite right and figuring out what happened means unraveling all that work Rails did. Rails certainly makes it easier to work with databases and objects without spending forever thinking about them, but there are a lot of things to figure out before that ease becomes obvious.
-</p>
-<p>
-If you’d rather learn Ruby on Rails more slowly, starting from pieces that are more familiar to the average web developer and then moving slowly into controllers and models, you’re in the right place. You can start from the HTML you already likely know, and then move more deeply into Rails’ many interlinked components.
-</p>
-</div>
+	<h3 id="flip">Preface</h3>
+	<div id="panel">
+	<p>
+	What is wrong in the world? Web Development. It is way harder than it has to be.
+	</p>
+	<p>
+	Everyone cool seems to agree: Ruby on Rails is an amazing way to build web applications. Ruby is a powerful and flexible programming language, and Rails takes advantage of that flexibility to build a web application framework that takes care of a tremendous amount of work for the developer. Everything sounds great!
+	</p>
+	<p>
+	Except, well… all the Ruby on Rails books talk about this “Model-View-Controller” thing, and they start deep inside the application, close to the database, most of the time. From an experienced Rails developer’s perspective, this makes sense—the framework’s power lies largely in making it easy for developers to create a data model quickly, layer controller logic on top of that, and then, once all the hard work is done, put a thin layer of interface view on the very top. It’s good programming style, and it makes for more robust applications. Advanced Ajax functionality seems to come almost for free!
+	</p>
+	<p>
+	From the point of view of someone learning Ruby on Rails, however, that race to show off Rails’ power can be extremely painful. There’s a lot of seemingly magical behavior in Rails that works wonderfully—until one of the incantations isn’t quite right and figuring out what happened means unraveling all that work Rails did. Rails certainly makes it easier to work with databases and objects without spending forever thinking about them, but there are a lot of things to figure out before that ease becomes obvious.
+	</p>
+	<p>
+	If you’d rather learn Ruby on Rails more slowly, starting from pieces that are more familiar to the average web developer and then moving slowly into controllers and models, you’re in the right place. You can start from the HTML you already likely know, and then move more deeply into Rails’ many interlinked components.
+	</p>
+	</div>
 
-<h3 id="flip">Who This Book Is For</h3>
-<div id="panel">
-<p>
-If you’ve been working with the Web for long enough to know that writing web applications always seems more complicated than it should be. There are lots of parts to manage, along with lots of people to manage, and hopefully lots of visitors to please. Ruby on Rails has intrigued you as one possible solution to that situation.
-</p>
-<p>
-You may be a designer who’s moving toward application development or a developer who combines some design skills with some programming skills. You may be a programmer who’s familiar with HTML but who lacks the sense of grace needed to create beautiful design—that’s a fair description of one of the authors of this book, anyway. Wherever you’re from, whatever you do, you know the Web well and would like to learn how Rails can make your life easier.
-</p>
-<p>
-The only mandatory technical prerequisite for reading this book is direct familiarity with HTML and a general sense of how programming works. You’ll be inserting Ruby code into that HTML as a first step toward writing Ruby code directly, so understanding HTML is a key foundation.
-</p>
-<p>
-Cascading Style Sheets (CSS) will help you make that HTML look a lot nicer, but it’s not necessary for this book. Similarly, a sense of how JavaScript works may help. Experience with other templating languages (like PHP, ASP, and ASP.NET) can also help, but it isn’t required.
-</p>
-<p>
-You also need to be willing to work from the command line sometimes. The commands aren’t terribly complicated, but they aren’t hidden behind a graphical interface either. If you are not comfortable working from the command line this is a nice goal [as a Web Developer] to work toward. General fluency at the command line is a nice gateway drug to more sofisticated dev ops (development operations) and sys admin (system administrator) skills. While web development and dev ops are very different skills sets; I have never met a good Web Developer that did not know some dev ops, just as I have never met a good sys admin who did not have some development and coding skills.
-</p>
-</div>
-<h3 id="flip">Who This Book Is Not For</h3>
-<div id="panel">
-<p>
-We don’t really want to cut anyone out of the possibility of reading this book, but there are some groups of people who aren’t likely to enjoy it. Model-View-Controller purists will probably grind their teeth through the first few chapters, and people who insist that data structures are at the heart of a good application are going to have to wait an even longer time to see their hopes realized. If you consider HTML just a nuisance that programmers have to put up with, odds are good that this book isn’t for you. Most of the other Ruby on Rails books, though, are written for people who want to start from the model!
-</p>
-<p>
-Also, people who are convinced that Ruby and Rails are the one true way may have some problems with this book, which spends a fair amount of time warning readers about potential problems and confusions they need to avoid. Yes, once you’ve worked with Ruby and Rails for a while, their elegance is obvious. However, reaching that level of comfort and familiarity is often a difficult road. This book attempts to ease as many of those challenges as possible by describing them clearly.
-</p>
-</div>
-<h3 id="flip">What You’ll Learn</h3>
-<div id="panel">
-<p>
-Building a Ruby on Rails application requires mastering a complicated set of skills. You may find that—depending on how you’re working with it, and who you’re working with—you only need part of this tour. That’s fine. Just go as far as you think you’ll need.
-</p>
-<p>
-At the beginning, you’ll need to install Ruby on Rails. We’ll explore different ways of doing this, with an emphasis on easier approaches to getting Ruby and Rails operational.
-</p>
-<p>
-Next, we’ll create a very simple Ruby on Rails application, with only a basic view and then a controller that does a very few things. From this foundation, we’ll explore ways to create a more sophisticated layout using a variety of tools, learning more about Ruby along the way.
-</p>
-<p>
-Once we’ve learned how to present information, we’ll take a closer look at controllers and what they can do. Forms processing is critical to most web applications, so we’ll build a few forms and process their results, moving from the simple to the complex.
-<p>
-Forms can do interesting things without storing data, but after a while it’s a lot more fun to have data that lasts for more than just a few moments. The next step is setting up a database to store information and figuring out how the magic of Rails’ ActiveRecord makes it easy to create code that maps directly to database structures—without having to think too hard about database structures or SQL.
-</p>
-<p>
-Once we have ActiveRecord up and running, we’ll explore scaffolding and its possibilities. Rails scaffolding not only helps you build applications quickly, it helps you learn to build them well. The RESTful approach that Rails emphasizes will make it simpler for you to create applications that are both attractive and maintainable. For purposes of illustration, using scaffolding also makes it easier to demonstrate one task at a time, which we hope will make it easier for you to understand what’s happening.
-</p>
-<p>
-Ideally, at this point, you’ll feel comfortable with slightly more complicated data models, and we’ll take a look at applications that need to combine data in multiple tables. Mixing and matching data is at the heart of most web applications.
-</p>
-<p>
-We’ll also take a look at testing and debugging Rails code, a key factor in the framework’s success. Migrations, which make it easy to modify your underlying data structures (and even roll back those changes if necessary), are another key part of Rails’ approach to application maintainability.
-</p>
-<p>
-The next step will be to add some common web applications elements like sessions and cookies, as well as authentication. Rails (with the help of gems for authentication) can manage a lot of this work for you.
-</p>
-<p>
-We’ll also let Rails stretch its legs a bit, showing off its support for Syntactically Awesome Stylesheets (Sass), CoffeeScript scripting, bundle management, and sending email messages.
-</p>
-<p>
-By the end of this tour, you should be comfortable with working in Ruby on Rails. You may not be a Rails guru yet, but you’ll be ready to take advantage of all of the other resources out there for becoming one.
-</p>
-</div>
-<h3 id="flip">Ruby and Rails Style</h3>
-<div id="panel">
-<p>
-It’s definitely possible to write Ruby on Rails code in ways that look familiar to programmers from other languages. However, that code often isn’t really idiomatic Ruby, as Ruby programmers have chosen other paths. In general, this book will always try to introduce new concepts using syntax that’s likely to be familiar to developers from other environments, and then explain what the local idiom does. You’ll learn to write idiomatic Ruby that way (if you want to), and at the same time you’ll figure out how to read code from the Ruby pros.
-</p>
-<p>
-We’ve tried to make sure that the code we present is understandable to those without a strong background in Ruby. Ruby itself is worth an introductory book (or several), but the Ruby code in a lot of Rails applications is simple, thanks to the hard work the framework’s creators have already put into it. You may want to install Rails, and then explore Appendix A: An Incredibly brief introduction to Ruby before diving in.
-</p>
-</div>
-<h3 id="flip">Acknowledgments</h3>
-<div id="panel">
-<p>
-Thanks to Mike Loukides for thinking that Rails could use a new and different approach, and for supporting this project along the way. Tech reviewers Gregg Pollack, Shelley Powers, Mike Fitzgerald, Eric Berry, David Schruth, Mike Hendrickson, and Mark Levitt all helped improve the first edition of the book tremendously. For this edition, Aaron Sumner, David DeMello, and Alan Harris went through the details carefully, finding many changes we’d overlooked and making helpful suggestions. The rubyonrails-talk group provided regular inspiration, as did the screencasts and podcasts at http://railscasts.com/.
-</p>
-<p>
-This book was updated to Rails 5 in May 2016. For this revision I would like to thank Barnabas Bulpett for his help, support and motivation while updating and rewriting the book. Barnabas not only wrote all of the sample book code, but entirly rewrote Chapter 10, in addition to making significant content contributions throughout other chapters. A huge thanks to Natasha Ansari for updating all of the images in the book, in addtion to editing and tech review. Also to Aaron Sumner for tech review.
-</p>
-<p>
-J . Mark Locklear would like to thank his wife Erica for showng him what true passion is, his daughter Faith for helping him appreciate the simple things in life, and his parents John Pat and Deletha for giving him the ultimate example of hard work and perseverance.
-</p>
-<p>
-Barnabas Bulpett would like to thank O’Reilly Media and Mark Locklear for giving him the opportunity to provide the example code that accompanies this book. In addition, he wishes thank his two children, Kaya and Moses, for their support and patience through the late nights of work. Barnabas also thanks his father, Thomas Bulpett, for teaching him the value of hard work.
-</p>
-<p>
-Natasha Ansari would like to thank Barnabas Bulpett for his dedication and hard work and Mark Locklear for showing us that Rails makes sense (kinda).
-</p>
-<p>
-Simon St.Laurent wants to thank Angelika St.Laurent for her support over the course of writing this, even when it interfered with dinner, and Sungiva and Konrad St.Laurent for their loudly shouted suggestions. Simon would also like to thank Edd Dumbill for his initial encouragement and for making this book possible.
-</p>
-<p>
-Edd Dumbill wishes to thank his lovely children, Thomas, Katherine, and Peter, for bashing earnestly on the keyboard, and his coauthor, Simon St.Laurent, for his patient encouragement in writing this book. His lovely wife for enduring many late-night endeavors to learn about this wonderful world of code, his parents and sister for always encouraging him to find his own path, his community of designers and developers in the Lawrence area, Aaron Sumner for being a patient guide in the Ruby world, and his children, who inspire him to learn how to code well enough to teach it to them (if that’s what they want).
-</p>
-<p>
-We’d all like to thank Jasmine Perez for cleaning up our prose, Iris Febres for getting this book through production, and Lucie Haskins for the patient work it takes to build an index.
-</p>
+	<h3 id="flip">Who This Book Is For</h3>
+	<div id="panel">
+	<p>
+	If you’ve been working with the Web for long enough to know that writing web applications always seems more complicated than it should be. There are lots of parts to manage, along with lots of people to manage, and hopefully lots of visitors to please. Ruby on Rails has intrigued you as one possible solution to that situation.
+	</p>
+	<p>
+	You may be a designer who’s moving toward application development or a developer who combines some design skills with some programming skills. You may be a programmer who’s familiar with HTML but who lacks the sense of grace needed to create beautiful design—that’s a fair description of one of the authors of this book, anyway. Wherever you’re from, whatever you do, you know the Web well and would like to learn how Rails can make your life easier.
+	</p>
+	<p>
+	The only mandatory technical prerequisite for reading this book is direct familiarity with HTML and a general sense of how programming works. You’ll be inserting Ruby code into that HTML as a first step toward writing Ruby code directly, so understanding HTML is a key foundation.
+	</p>
+	<p>
+	Cascading Style Sheets (CSS) will help you make that HTML look a lot nicer, but it’s not necessary for this book. Similarly, a sense of how JavaScript works may help. Experience with other templating languages (like PHP, ASP, and ASP.NET) can also help, but it isn’t required.
+	</p>
+	<p>
+	You also need to be willing to work from the command line sometimes. The commands aren’t terribly complicated, but they aren’t hidden behind a graphical interface either. If you are not comfortable working from the command line this is a nice goal [as a Web Developer] to work toward. General fluency at the command line is a nice gateway drug to more sofisticated dev ops (development operations) and sys admin (system administrator) skills. While web development and dev ops are very different skills sets; I have never met a good Web Developer that did not know some dev ops, just as I have never met a good sys admin who did not have some development and coding skills.
+	</p>
+	</div>
+	<h3 id="flip">Who This Book Is Not For</h3>
+	<div id="panel">
+	<p>
+	We don’t really want to cut anyone out of the possibility of reading this book, but there are some groups of people who aren’t likely to enjoy it. Model-View-Controller purists will probably grind their teeth through the first few chapters, and people who insist that data structures are at the heart of a good application are going to have to wait an even longer time to see their hopes realized. If you consider HTML just a nuisance that programmers have to put up with, odds are good that this book isn’t for you. Most of the other Ruby on Rails books, though, are written for people who want to start from the model!
+	</p>
+	<p>
+	Also, people who are convinced that Ruby and Rails are the one true way may have some problems with this book, which spends a fair amount of time warning readers about potential problems and confusions they need to avoid. Yes, once you’ve worked with Ruby and Rails for a while, their elegance is obvious. However, reaching that level of comfort and familiarity is often a difficult road. This book attempts to ease as many of those challenges as possible by describing them clearly.
+	</p>
+	</div>
+	<h3 id="flip">What You’ll Learn</h3>
+	<div id="panel">
+	<p>
+	Building a Ruby on Rails application requires mastering a complicated set of skills. You may find that—depending on how you’re working with it, and who you’re working with—you only need part of this tour. That’s fine. Just go as far as you think you’ll need.
+	</p>
+	<p>
+	At the beginning, you’ll need to install Ruby on Rails. We’ll explore different ways of doing this, with an emphasis on easier approaches to getting Ruby and Rails operational.
+	</p>
+	<p>
+	Next, we’ll create a very simple Ruby on Rails application, with only a basic view and then a controller that does a very few things. From this foundation, we’ll explore ways to create a more sophisticated layout using a variety of tools, learning more about Ruby along the way.
+	</p>
+	<p>
+	Once we’ve learned how to present information, we’ll take a closer look at controllers and what they can do. Forms processing is critical to most web applications, so we’ll build a few forms and process their results, moving from the simple to the complex.
+	<p>
+	Forms can do interesting things without storing data, but after a while it’s a lot more fun to have data that lasts for more than just a few moments. The next step is setting up a database to store information and figuring out how the magic of Rails’ ActiveRecord makes it easy to create code that maps directly to database structures—without having to think too hard about database structures or SQL.
+	</p>
+	<p>
+	Once we have ActiveRecord up and running, we’ll explore scaffolding and its possibilities. Rails scaffolding not only helps you build applications quickly, it helps you learn to build them well. The RESTful approach that Rails emphasizes will make it simpler for you to create applications that are both attractive and maintainable. For purposes of illustration, using scaffolding also makes it easier to demonstrate one task at a time, which we hope will make it easier for you to understand what’s happening.
+	</p>
+	<p>
+	Ideally, at this point, you’ll feel comfortable with slightly more complicated data models, and we’ll take a look at applications that need to combine data in multiple tables. Mixing and matching data is at the heart of most web applications.
+	</p>
+	<p>
+	We’ll also take a look at testing and debugging Rails code, a key factor in the framework’s success. Migrations, which make it easy to modify your underlying data structures (and even roll back those changes if necessary), are another key part of Rails’ approach to application maintainability.
+	</p>
+	<p>
+	The next step will be to add some common web applications elements like sessions and cookies, as well as authentication. Rails (with the help of gems for authentication) can manage a lot of this work for you.
+	</p>
+	<p>
+	We’ll also let Rails stretch its legs a bit, showing off its support for Syntactically Awesome Stylesheets (Sass), CoffeeScript scripting, bundle management, and sending email messages.
+	</p>
+	<p>
+	By the end of this tour, you should be comfortable with working in Ruby on Rails. You may not be a Rails guru yet, but you’ll be ready to take advantage of all of the other resources out there for becoming one.
+	</p>
+	</div>
+	<h3 id="flip">Ruby and Rails Style</h3>
+	<div id="panel">
+	<p>
+	It’s definitely possible to write Ruby on Rails code in ways that look familiar to programmers from other languages. However, that code often isn’t really idiomatic Ruby, as Ruby programmers have chosen other paths. In general, this book will always try to introduce new concepts using syntax that’s likely to be familiar to developers from other environments, and then explain what the local idiom does. You’ll learn to write idiomatic Ruby that way (if you want to), and at the same time you’ll figure out how to read code from the Ruby pros.
+	</p>
+	<p>
+	We’ve tried to make sure that the code we present is understandable to those without a strong background in Ruby. Ruby itself is worth an introductory book (or several), but the Ruby code in a lot of Rails applications is simple, thanks to the hard work the framework’s creators have already put into it. You may want to install Rails, and then explore Appendix A: An Incredibly brief introduction to Ruby before diving in.
+	</p>
+	</div>
+	<h3 id="flip">Acknowledgments</h3>
+	<div id="panel">
+	<p>
+	Thanks to Mike Loukides for thinking that Rails could use a new and different approach, and for supporting this project along the way. Tech reviewers Gregg Pollack, Shelley Powers, Mike Fitzgerald, Eric Berry, David Schruth, Mike Hendrickson, and Mark Levitt all helped improve the first edition of the book tremendously. For this edition, Aaron Sumner, David DeMello, and Alan Harris went through the details carefully, finding many changes we’d overlooked and making helpful suggestions. The rubyonrails-talk group provided regular inspiration, as did the screencasts and podcasts at http://railscasts.com/.
+	</p>
+	<p>
+	This book was updated to Rails 5 in May 2016. For this revision I would like to thank Barnabas Bulpett for his help, support and motivation while updating and rewriting the book. Barnabas not only wrote all of the sample book code, but entirly rewrote Chapter 10, in addition to making significant content contributions throughout other chapters. A huge thanks to Natasha Ansari for updating all of the images in the book, in addtion to editing and tech review. Also to Aaron Sumner for tech review.
+	</p>
+	<p>
+	J . Mark Locklear would like to thank his wife Erica for showng him what true passion is, his daughter Faith for helping him appreciate the simple things in life, and his parents John Pat and Deletha for giving him the ultimate example of hard work and perseverance.
+	</p>
+	<p>
+	Barnabas Bulpett would like to thank O’Reilly Media and Mark Locklear for giving him the opportunity to provide the example code that accompanies this book. In addition, he wishes thank his two children, Kaya and Moses, for their support and patience through the late nights of work. Barnabas also thanks his father, Thomas Bulpett, for teaching him the value of hard work.
+	</p>
+	<p>
+	Natasha Ansari would like to thank Barnabas Bulpett for his dedication and hard work and Mark Locklear for showing us that Rails makes sense (kinda).
+	</p>
+	<p>
+	Simon St.Laurent wants to thank Angelika St.Laurent for her support over the course of writing this, even when it interfered with dinner, and Sungiva and Konrad St.Laurent for their loudly shouted suggestions. Simon would also like to thank Edd Dumbill for his initial encouragement and for making this book possible.
+	</p>
+	<p>
+	Edd Dumbill wishes to thank his lovely children, Thomas, Katherine, and Peter, for bashing earnestly on the keyboard, and his coauthor, Simon St.Laurent, for his patient encouragement in writing this book. His lovely wife for enduring many late-night endeavors to learn about this wonderful world of code, his parents and sister for always encouraging him to find his own path, his community of designers and developers in the Lawrence area, Aaron Sumner for being a patient guide in the Ruby world, and his children, who inspire him to learn how to code well enough to teach it to them (if that’s what they want).
+	</p>
+	<p>
+	We’d all like to thank Jasmine Perez for cleaning up our prose, Iris Febres for getting this book through production, and Lucie Haskins for the patient work it takes to build an index.
+	</p>
+	</div>
 </div>
