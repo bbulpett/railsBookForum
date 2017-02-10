@@ -19,4 +19,7 @@ class StaticController < ApplicationController
 
   def education
   end
+
+  def foreword
+  end
 end

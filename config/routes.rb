@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'errata' => 'static#errata'
   get 'examples' => 'static#examples'
   get 'education' => 'static#education'
+  get 'foreword' => 'static#foreword'
   get 'static/share'
 
   mount Ckeditor::Engine => '/ckeditor'
