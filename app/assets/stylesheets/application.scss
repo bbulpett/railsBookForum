@@ -820,7 +820,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 	 .nav.navbar-nav li {
 	    text-align: left;
 	 }
-	 .nav.navbar-nav li:not(:nth-last-child(-n+2)) {
+	 .nav.navbar-nav {
 	  a {
 	  	padding: 8px;
 	  }
@@ -895,7 +895,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		font-size: 56px;
 	}
 
-	.nav.navbar-nav li:not(:nth-last-child(-n+2)) {
+	.nav.navbar-nav {
 	  a {
 	  	padding: 8px 15px;
 	  }
@@ -980,7 +980,7 @@ $breakpoint-custom-iPhoneRetina: 320px;
 		font-size: 68px;
 	}
 
-	.nav.navbar-nav li:not(:nth-last-child(-n+2)) {
+	.nav.navbar-nav {
 	  a {
 	  	padding: 8px 20px;
 	  }
