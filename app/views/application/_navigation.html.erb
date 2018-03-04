@@ -1,6 +1,9 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        Menu                       
+      </button>
       <%= link_to "Buy eBook", "http://shop.oreilly.com/product/0636920039822.do", class: "btn btn-dark navbar-toggle", style: "color: #FFF; background-color: #B63E97;", target: "_blank" %>
       <%= link_to "Learning Rails 5", root_path, class: "navbar-brand" %>
     </div>
@@ -11,9 +14,37 @@
         <li class="<%= 'active' if current_page?(errata_path) %>"><%= link_to "Errata", errata_path %></li>
         <li class="<%= 'active' if current_page?(examples_path) %>"><%= link_to "Examples", examples_path %></li>
         <li class="<%= 'active' if current_page?(screencasts_path) %>"><%= link_to "Screencasts", screencasts_path %></li>
+        <li class="<%= 'active' if current_page?(forums_path) %>"><%= link_to "Forum", forums_path %></li>
         <li class="<%= 'active' if current_page?(education_path) %>"><%= link_to "Teach", education_path %></li>
+        <li class="share-button"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="fa fa-share-square-o"></i>Share</a>
+          <%= render 'share' %>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
+<div class="modal fade" id="share_modal" tabindex="-1" role="dialog" aria-labelledby="share_modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+<!--       <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close"></i>Close</button>
+      <h4 class="modal-title" id="myModalLabel">Spread the Word!</h4>
+      </div>
+      <div class="modal-body">
+            <%# image_tag "loading.gif" %>
+            <%# render 'facebook_modal' %>
+      </div> -->
+    </div>
+  </div>
+</div>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
